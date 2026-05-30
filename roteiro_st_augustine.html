@@ -99,109 +99,52 @@ h1{font-size:2.4rem;font-weight:800;line-height:1.1;margin-bottom:.5rem}
 
       <div class="mapw">
         <div class="mapt">mapa do circuito a pé · St. Augustine — todos os pontos</div>
-        <svg viewBox="0 0 660 425" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:'DM Mono',monospace">
-          <rect width="660" height="425" fill="#0d1117" rx="6"/>
-
-          <!-- Rio / BayFront -->
-          <rect x="570" y="0" width="90" height="425" fill="#071525"/>
-          <text x="615" y="200" fill="#1a4a7a" font-size="8" text-anchor="middle" transform="rotate(90,615,200)">Matanzas River · BayFront</text>
-
-          <!-- Ruas principais -->
-          <rect x="195" y="15" width="10" height="320" fill="#2a2a2a" rx="2"/>
-          <text x="155" y="12" fill="#3a3a3a" font-size="8">St George St</text>
-          <rect x="285" y="15" width="8" height="320" fill="#222" rx="1"/>
-          <text x="245" y="12" fill="#333" font-size="7">Cordova St</text>
-          <rect x="375" y="15" width="7" height="280" fill="#1a1a1a" rx="1"/>
-
-          <!-- Horizontais -->
-          <rect x="100" y="75" width="460" height="7" fill="#222" rx="1"/>
-          <text x="105" y="70" fill="#333" font-size="7">Castillo Dr N</text>
-          <rect x="100" y="120" width="460" height="7" fill="#222" rx="1"/>
-          <text x="105" y="115" fill="#333" font-size="7">Treasury St</text>
-          <rect x="100" y="168" width="460" height="8" fill="#252525" rx="1"/>
-          <text x="105" y="163" fill="#333" font-size="7">Cathedral Place</text>
-          <rect x="100" y="215" width="460" height="9" fill="#2a2a2a" rx="1"/>
-          <text x="105" y="210" fill="#3a3a3a" font-size="8">King Street</text>
-
-          <!-- Bridge of Lions -->
-          <rect x="490" y="212" width="80" height="9" fill="#1a3a5a" rx="2"/>
-          <text x="500" y="238" fill="#60a5fa" font-size="7">Bridge of Lions</text>
-
-          <!-- ROTA -->
-          <polyline points="289,258 289,215 289,168 289,124 200,124 200,78 350,78 350,168 490,168 490,215 545,215"
-            fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5,3"/>
-          <polyline points="545,215 545,258 289,258"
-            fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.4"/>
-
-          <!-- PONTOS -->
-          <!-- Hotel -->
-          <circle cx="289" cy="260" r="9" fill="#fbbf24"/>
-          <text x="245" y="264" fill="#fbbf24" font-size="9" text-anchor="end">Hotel</text>
-          <text x="245" y="275" fill="#555" font-size="7" text-anchor="end">38 Cordova St</text>
-
-          <!-- St George St -->
-          <circle cx="200" cy="100" r="6" fill="#2dd4bf"/>
-          <text x="150" y="96" fill="#2dd4bf" font-size="8" text-anchor="end">St George St</text>
-          <text x="150" y="107" fill="#555" font-size="7" text-anchor="end">lojas · história</text>
-
-          <!-- Whetstone -->
-          <circle cx="200" cy="124" r="5" fill="#a78bfa"/>
-          <text x="150" y="121" fill="#a78bfa" font-size="8" text-anchor="end">Whetstone</text>
-          <text x="150" y="131" fill="#555" font-size="7" text-anchor="end">chocolates grátis</text>
-
-          <!-- Castillo -->
-          <circle cx="200" cy="58" r="7" fill="#fb7185"/>
-          <text x="150" y="54" fill="#fb7185" font-size="8" text-anchor="end">Castillo de</text>
-          <text x="150" y="64" fill="#fb7185" font-size="8" text-anchor="end">San Marcos</text>
-          <text x="150" y="74" fill="#555" font-size="7" text-anchor="end">pôr do sol</text>
-
-          <!-- Plaza -->
-          <circle cx="350" cy="168" r="6" fill="#2dd4bf"/>
-          <text x="350" y="158" fill="#2dd4bf" font-size="8" text-anchor="middle">Plaza</text>
-          <text x="350" y="148" fill="#555" font-size="7" text-anchor="middle">Constitución</text>
-
-          <!-- Cathedral -->
-          <circle cx="289" cy="168" r="6" fill="#2dd4bf"/>
-          <text x="240" y="165" fill="#2dd4bf" font-size="8" text-anchor="end">Basílica</text>
-
-          <!-- Lightner -->
-          <circle cx="350" cy="78" r="6" fill="#2dd4bf"/>
-          <text x="350" y="68" fill="#2dd4bf" font-size="8" text-anchor="middle">Lightner</text>
-          <text x="350" y="58" fill="#555" font-size="7" text-anchor="middle">só fachada</text>
-
-          <!-- BayFront -->
-          <circle cx="490" cy="168" r="6" fill="#60a5fa"/>
-          <text x="500" y="164" fill="#60a5fa" font-size="8">BayFront</text>
-
-          <!-- Bridge -->
-          <circle cx="545" cy="215" r="6" fill="#60a5fa"/>
-
-          <!-- Flagler -->
-          <circle cx="289" cy="215" r="6" fill="#fb7185"/>
-          <text x="302" y="211" fill="#fb7185" font-size="8">Flagler College</text>
-
-          <!-- A1A jantar -->
-          <circle cx="505" cy="217" r="5" fill="#4ade80"/>
-          <text x="505" y="252" fill="#4ade80" font-size="8" text-anchor="middle">A1A Ale Works</text>
-          <text x="505" y="262" fill="#555" font-size="7" text-anchor="middle">jantar</text>
-
-          <!-- LEGENDA — coluna única, espaçamento fixo 16px -->
-          <rect x="15" y="288" width="195" height="118" fill="#0d1117" stroke="#2a2a2a" stroke-width="0.5" rx="6"/>
-          <circle cx="27" cy="302" r="4" fill="#fbbf24"/>
-          <text x="36" y="306" fill="#666" font-size="8">hotel / base (estac. grátis)</text>
-          <circle cx="27" cy="318" r="4" fill="#2dd4bf"/>
-          <text x="36" y="322" fill="#666" font-size="8">circuito histórico a pé</text>
-          <circle cx="27" cy="334" r="4" fill="#fb7185"/>
-          <text x="36" y="338" fill="#666" font-size="8">destaques / monumentos</text>
-          <circle cx="27" cy="350" r="4" fill="#60a5fa"/>
-          <text x="36" y="354" fill="#666" font-size="8">BayFront / Bridge of Lions</text>
-          <circle cx="27" cy="366" r="4" fill="#a78bfa"/>
-          <text x="36" y="370" fill="#666" font-size="8">Whetstone (sugestão extra)</text>
-          <circle cx="27" cy="382" r="4" fill="#4ade80"/>
-          <text x="36" y="386" fill="#666" font-size="8">A1A Ale Works (jantar)</text>
-
-          <text x="15" y="414" fill="#333" font-size="7">circuito total: ~2,5 km · ~1h45–2h sem paradas</text>
-        </svg>
+        <svg viewBox="0 0 360 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:0;height:auto;display:block;font-family:'DM Mono',monospace">
+  <rect width="360" height="400" fill="#0d1117" rx="6"/>
+  <rect x="300" y="0" width="60" height="400" fill="#071525"/>
+  <text x="330" y="205" fill="#1a4a7a" font-size="8" text-anchor="middle" transform="rotate(90,330,205)">Matanzas River</text>
+  <rect x="115" y="10" width="8" height="320" fill="#2a2a2a" rx="1"/>
+  <text x="90" y="8" fill="#3a3a3a" font-size="8">St George</text>
+  <rect x="165" y="10" width="6" height="320" fill="#222" rx="1"/>
+  <text x="142" y="8" fill="#333" font-size="7">Cordova</text>
+  <rect x="50" y="65" width="245" height="5" fill="#222" rx="1"/><text x="54" y="61" fill="#333" font-size="7">Castillo Dr N</text>
+  <rect x="50" y="108" width="245" height="5" fill="#222" rx="1"/><text x="54" y="104" fill="#333" font-size="7">Treasury St</text>
+  <rect x="50" y="148" width="245" height="5" fill="#252525" rx="1"/><text x="54" y="144" fill="#333" font-size="7">Cathedral Pl</text>
+  <rect x="50" y="188" width="245" height="7" fill="#2a2a2a" rx="1"/><text x="54" y="184" fill="#3a3a3a" font-size="8">King Street</text>
+  <rect x="275" y="185" width="60" height="8" fill="#1a3a5a" rx="2"/>
+  <text x="278" y="208" fill="#60a5fa" font-size="7">Bridge of Lions</text>
+  <polyline points="168,222 168,188 168,148 168,108 119,108 119,65 210,65 210,148 275,148 275,188 300,188" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5,3"/>
+  <circle cx="168" cy="224" r="9" fill="#fbbf24"/>
+  <text x="148" y="220" fill="#fbbf24" font-size="9" text-anchor="end" font-weight="500">Hotel</text>
+  <circle cx="119" cy="88" r="5" fill="#2dd4bf"/>
+  <text x="104" y="84" fill="#2dd4bf" font-size="8" text-anchor="end">St George St</text>
+  <circle cx="119" cy="108" r="5" fill="#a78bfa"/>
+  <text x="104" y="112" fill="#a78bfa" font-size="8" text-anchor="end">Whetstone</text>
+  <circle cx="119" cy="48" r="7" fill="#fb7185"/>
+  <text x="104" y="44" fill="#fb7185" font-size="8" text-anchor="end">Castillo</text>
+  <text x="104" y="54" fill="#555" font-size="7" text-anchor="end">pôr do sol</text>
+  <circle cx="210" cy="148" r="5" fill="#2dd4bf"/>
+  <text x="224" y="144" fill="#2dd4bf" font-size="8">Plaza</text>
+  <circle cx="168" cy="148" r="5" fill="#2dd4bf"/>
+  <text x="152" y="144" fill="#2dd4bf" font-size="8" text-anchor="end">Basílica</text>
+  <circle cx="210" cy="65" r="5" fill="#2dd4bf"/>
+  <text x="224" y="61" fill="#2dd4bf" font-size="8">Lightner</text>
+  <circle cx="168" cy="188" r="5" fill="#fb7185"/>
+  <text x="152" y="184" fill="#fb7185" font-size="8" text-anchor="end">Flagler</text>
+  <circle cx="275" cy="148" r="5" fill="#60a5fa"/>
+  <text x="278" y="144" fill="#60a5fa" font-size="8">BayFront</text>
+  <circle cx="300" cy="188" r="5" fill="#60a5fa"/>
+  <circle cx="278" cy="190" r="4" fill="#4ade80"/>
+  <text x="264" y="230" fill="#4ade80" font-size="8" text-anchor="middle">A1A Ale Works</text>
+  <rect x="8" y="300" width="130" height="90" fill="#0d1117" stroke="#2a2a2a" stroke-width="0.5" rx="4"/>
+  <circle cx="18" cy="314" r="4" fill="#fbbf24"/><text x="26" y="318" fill="#666" font-size="8">hotel (estac. grátis)</text>
+  <circle cx="18" cy="330" r="4" fill="#2dd4bf"/><text x="26" y="334" fill="#666" font-size="8">circuito histórico</text>
+  <circle cx="18" cy="346" r="4" fill="#fb7185"/><text x="26" y="350" fill="#666" font-size="8">destaques</text>
+  <circle cx="18" cy="362" r="4" fill="#60a5fa"/><text x="26" y="366" fill="#666" font-size="8">BayFront</text>
+  <circle cx="18" cy="378" r="4" fill="#a78bfa"/><text x="26" y="382" fill="#666" font-size="8">Whetstone</text>
+  <circle cx="78" cy="314" r="4" fill="#4ade80"/><text x="86" y="318" fill="#666" font-size="8">A1A (jantar)</text>
+  <text x="8" y="395" fill="#333" font-size="7">~2,5 km · ~1h45 sem paradas</text>
+</svg>
         <div class="maplnk"><a href="https://www.google.com/maps/search/St+Augustine+historic+downtown+St+George+Street" target="_blank">↗ Abrir no Google Maps</a></div>
       </div>
 
