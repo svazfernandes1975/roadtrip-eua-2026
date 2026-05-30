@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viagem EUA 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;
+  --border:#2a2a2a;--border2:#333;
+  --text:#e8e8e8;--muted:#555;--muted2:#888;
+  --amber:#fbbf24;--adim:#2a1f0a;
+  --blue:#60a5fa;--bdim:#0f1e35;
+  --green:#4ade80;--gdim:#1a3a2a;
+  --teal:#2dd4bf;--tdim:#0a1e1c;
+  --coral:#fb7185;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overflow-x:hidden}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:2rem;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%, #0f1e35 0%, #0a0a0a 70%);z-index:0}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle 3s infinite alternate}
+@keyframes twinkle{0%{opacity:.1}100%{opacity:.7}}
+.hero-content{position:relative;z-index:1}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp .8s ease both}
+.hero-title{font-size:clamp(2.8rem,8vw,6rem);font-weight:800;line-height:1;margin-bottom:1rem;animation:fadeUp .8s .1s ease both}
+.hero-title span{color:var(--amber)}
+.hero-sub{font-size:1rem;color:var(--muted2);margin-bottom:2.5rem;animation:fadeUp .8s .2s ease both}
+.hero-dates{display:inline-flex;align-items:center;gap:1rem;background:var(--bg2);border:1px solid var(--border2);border-radius:50px;padding:.6rem 1.5rem;font-family:'DM Mono',monospace;font-size:.85rem;margin-bottom:3rem;animation:fadeUp .8s .3s ease both}
+.hero-dates span{color:var(--amber)}
+.countdown{display:flex;gap:1.5rem;justify-content:center;animation:fadeUp .8s .4s ease both}
+.cd-unit{text-align:center}
+.cd-num{font-size:2.5rem;font-weight:800;line-height:1;color:var(--amber);font-family:'DM Mono',monospace}
+.cd-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;animation:bounce 2s infinite;z-index:1}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── SECTION ── */
+.section{padding:5rem 2rem;max-width:1100px;margin:0 auto}
+.section-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-size:2rem;font-weight:800;margin-bottom:.5rem}
+.section-sub{font-size:.9rem;color:var(--muted2);margin-bottom:3rem}
+
+/* ── ROTA SVG ── */
+.map-section{padding:5rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.map-inner{max-width:1100px;margin:0 auto;padding:0 2rem}
+.map-wrap{position:relative;margin-top:2rem}
+.route-svg{width:100%;max-width:520px;display:block;margin:0 auto}
+
+/* animação da rota */
+.route-path{stroke-dasharray:2000;stroke-dashoffset:2000;animation:drawRoute 3s ease forwards 0.5s}
+@keyframes drawRoute{to{stroke-dashoffset:0}}
+
+.city-dot{opacity:0;animation:popIn .3s ease forwards}
+.city-dot:nth-child(1){animation-delay:0.6s}
+.city-dot:nth-child(2){animation-delay:0.9s}
+.city-dot:nth-child(3){animation-delay:1.2s}
+.city-dot:nth-child(4){animation-delay:1.5s}
+.city-dot:nth-child(5){animation-delay:1.8s}
+.city-dot:nth-child(6){animation-delay:2.1s}
+.city-dot:nth-child(7){animation-delay:2.4s}
+.city-dot:nth-child(8){animation-delay:2.7s}
+.city-dot:nth-child(9){animation-delay:3.0s}
+@keyframes popIn{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+
+/* ── CARDS DE CIDADES ── */
+.cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+.city-card{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;overflow:hidden;transition:transform .2s, border-color .2s;cursor:pointer;text-decoration:none;color:inherit;display:block}
+.city-card:hover{transform:translateY(-3px);border-color:var(--border)}
+.city-card.ready:hover{border-color:var(--amber)}
+.city-card.soon{opacity:.55;cursor:default}
+.city-card:hover.soon{transform:none}
+.card-banner{height:6px}
+.card-body{padding:1.25rem}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
+.card-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted)}
+.card-badge{font-family:'DM Mono',monospace;font-size:9px;padding:2px 8px;border-radius:20px}
+.badge-ready{background:var(--gdim);color:var(--green)}
+.badge-soon{background:var(--bg3);color:var(--muted2);border:1px solid var(--border)}
+.badge-wip{background:var(--adim);color:var(--amber)}
+.card-city{font-size:1.3rem;font-weight:800;margin-bottom:.2rem}
+.card-state{font-size:.78rem;color:var(--muted2);font-family:'DM Mono',monospace;margin-bottom:.75rem}
+.card-dates{font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted2);margin-bottom:.5rem}
+.card-nights{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--muted)}
+.card-footer{margin-top:1rem;padding-top:.75rem;border-top:1px solid var(--border);font-family:'DM Mono',monospace;font-size:.72rem;color:var(--muted2);display:flex;align-items:center;gap:.5rem}
+.card-arrow{margin-left:auto;color:var(--amber);font-size:1rem;transition:transform .2s}
+.city-card.ready:hover .card-arrow{transform:translateX(4px)}
+
+/* ── STATS ── */
+.stats-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border)}
+.stat{flex:1;min-width:120px}
+.stat-num{font-size:2rem;font-weight:800;line-height:1}
+.stat-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+
+/* ── FOOTER ── */
+footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)}
+
+/* ── MOBILE ── */
+@media(max-width:600px){
+  .hero-title{font-size:2.8rem}
+  .countdown{gap:1rem}
+  .cd-num{font-size:1.8rem}
+  .section{padding:3rem 1rem}
+  .cities-grid{grid-template-columns:1fr}
+  .stats-row{gap:1rem}
+  .stat-num{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <!-- estrelas decorativas -->
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const bg = document.querySelector('.hero-bg');
+      for(let i=0;i<60;i++){
+        const s=document.createElement('div');
+        s.className='star';
+        const sz=Math.random()*2+1;
+        s.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation-delay:${Math.random()*3}s;animation-duration:${2+Math.random()*3}s`;
+        bg.appendChild(s);
+      }
+    });
+  </script>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">road trip · 23 dias · 9 destinos</div>
+    <h1 class="hero-title">Viagem<br><span>EUA 2026</span></h1>
+    <p class="hero-sub">Miami → Orlando → St. Augustine → Savannah → Greenville → Asheville → Staunton → Williamsburg → Washington DC</p>
+    <div class="hero-dates">
+      <span>3 set</span>
+      <span style="color:var(--muted)">→</span>
+      <span>27 set 2026</span>
+    </div>
+    <div class="countdown" id="countdown">
+      <div class="cd-unit"><div class="cd-num" id="cd-d">--</div><div class="cd-label">dias</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-h">--</div><div class="cd-label">horas</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-m">--</div><div class="cd-label">min</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-s">--</div><div class="cd-label">seg</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ &nbsp; ver roteiro</div>
+</section>
+
+<!-- ══ MAPA DA ROTA ══ -->
+<section class="map-section">
+  <div class="map-inner">
+    <div class="section-label">a rota</div>
+    <div class="section-title">9 cidades · 9.400 km de estrada</div>
+    <p class="section-sub" style="margin-bottom:0">De carro, pela costa leste dos Estados Unidos</p>
+
+    <div class="map-wrap">
+      <svg class="route-svg" viewBox="0 0 320 580" xmlns="http://www.w3.org/2000/svg" style="font-family:'DM Mono',monospace">
+        <!-- fundo do mapa estilizado -->
+        <rect width="320" height="580" fill="#0d1117" rx="12"/>
+
+        <!-- costa leste (forma decorativa) -->
+        <path d="M200,10 Q240,50 250,120 Q260,180 245,240 Q235,280 230,320 Q240,360 235,400 Q225,440 210,480 Q200,510 195,540 Q185,560 175,570" stroke="#1a3a5a" stroke-width="18" fill="none" opacity="0.4"/>
+
+        <!-- ROTA ANIMADA -->
+        <!-- Miami(165,530) → Orlando(145,450) → St.Augustine(175,400) → Savannah(185,340) → Greenville(130,250) → Asheville(115,230) → Staunton(145,165) → Williamsburg(195,140) → Washington(190,85) -->
+        <path class="route-path"
+          d="M165,530 C155,500 148,475 145,450 C142,425 160,410 175,400 C185,392 188,368 185,340 C182,318 160,285 130,250 C118,238 115,235 115,230 C115,210 128,188 145,165 C158,148 175,144 195,140 C195,130 192,108 190,85"
+          stroke="#fbbf24" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- pontos das cidades (em ordem sul→norte para animação) -->
+        <g class="city-dot" style="transform-origin:165px 530px">
+          <circle cx="165" cy="530" r="8" fill="#fbbf24" opacity="0.15"/>
+          <circle cx="165" cy="530" r="5" fill="#fbbf24"/>
+          <text x="145" y="526" fill="#fbbf24" font-size="9" text-anchor="end" font-weight="500">Miami</text>
+          <text x="145" y="537" fill="#555" font-size="7" text-anchor="end">chegada · 4/set</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:145px 450px">
+          <circle cx="145" cy="450" r="8" fill="#4ade80" opacity="0.15"/>
+          <circle cx="145" cy="450" r="5" fill="#4ade80"/>
+          <text x="125" y="446" fill="#4ade80" font-size="9" text-anchor="end" font-weight="500">Orlando</text>
+          <text x="125" y="457" fill="#555" font-size="7" text-anchor="end">4–10/set · 6 noites</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:175px 400px">
+          <circle cx="175" cy="400" r="7" fill="#60a5fa" opacity="0.15"/>
+          <circle cx="175" cy="400" r="4" fill="#60a5fa"/>
+          <text x="192" y="396" fill="#60a5fa" font-size="9" font-weight="500">St. Augustine</text>
+          <text x="192" y="407" fill="#555" font-size="7">10–11/set · 1 noite</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:185px 340px">
+          <circle cx="185" cy="340" r="7" fill="#2dd4bf" opacity="0.15"/>
+          <circle cx="185" cy="340" r="4" fill="#2dd4bf"/>
+          <text x="200" y="336" fill="#2dd4bf" font-size="9" font-weight="500">Savannah</text>
+          <text x="200" y="347" fill="#555" font-size="7">11–13/set · 2 noites</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:130px 250px">
+          <circle cx="130" cy="250" r="7" fill="#a78bfa" opacity="0.15"/>
+          <circle cx="130" cy="250" r="4" fill="#a78bfa"/>
+          <text x="115" y="246" fill="#a78bfa" font-size="9" text-anchor="end" font-weight="500">Greenville</text>
+          <text x="115" y="257" fill="#555" font-size="7" text-anchor="end">13–14/set · 1 noite</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:115px 230px">
+          <circle cx="115" cy="225" r="7" fill="#f97316" opacity="0.15"/>
+          <circle cx="115" cy="225" r="4" fill="#f97316"/>
+          <text x="100" y="221" fill="#f97316" font-size="9" text-anchor="end" font-weight="500">Asheville</text>
+          <text x="100" y="232" fill="#555" font-size="7" text-anchor="end">14–18/set · 3 noites</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:145px 165px">
+          <circle cx="145" cy="165" r="7" fill="#888" opacity="0.15"/>
+          <circle cx="145" cy="165" r="4" fill="#888"/>
+          <text x="160" y="161" fill="#888" font-size="9" font-weight="500">Staunton</text>
+          <text x="160" y="172" fill="#555" font-size="7">18–19/set · 1 noite</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:195px 140px">
+          <circle cx="195" cy="140" r="7" fill="#fb7185" opacity="0.15"/>
+          <circle cx="195" cy="140" r="4" fill="#fb7185"/>
+          <text x="210" y="136" fill="#fb7185" font-size="9" font-weight="500">Williamsburg</text>
+          <text x="210" y="147" fill="#555" font-size="7">19–21/set · 2 noites</text>
+        </g>
+
+        <g class="city-dot" style="transform-origin:190px 85px">
+          <circle cx="190" cy="85" r="9" fill="#fbbf24" opacity="0.2"/>
+          <circle cx="190" cy="85" r="6" fill="#fbbf24"/>
+          <text x="205" y="81" fill="#fbbf24" font-size="9" font-weight="500">Washington DC</text>
+          <text x="205" y="92" fill="#555" font-size="7">21–26/set · 5 noites</text>
+        </g>
+
+        <!-- legenda do mapa -->
+        <rect x="10" y="548" width="300" height="22" fill="#0d1117" rx="4"/>
+        <polyline points="15,558 35,558" stroke="#fbbf24" stroke-width="2" fill="none"/>
+        <text x="40" y="562" fill="#555" font-size="8">rota de carro · ~9.400 km total</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CIDADES ══ -->
+<section class="section">
+  <div class="section-label">os destinos</div>
+  <div class="section-title">Roteiros cidade a cidade</div>
+  <p class="section-sub">Clique nos roteiros prontos para acessar. Os demais serão publicados em breve.</p>
+
+  <div class="cities-grid">
+
+    <!-- Miami (só chegada, sem roteiro próprio) -->
+    <div class="city-card soon">
+      <div class="card-banner" style="background:linear-gradient(90deg,#fbbf24,#f97316)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">ponto A · chegada</span><span class="card-badge badge-soon">sem roteiro</span></div>
+        <div class="card-city">Miami</div>
+        <div class="card-state">Florida, FL</div>
+        <div class="card-dates">3 set (qui) → 4 set (sex)</div>
+        <div class="card-nights">Aeroporto MIA · aluguel de carro · seguir para Orlando</div>
+      </div>
+    </div>
+
+    <!-- Orlando PRONTO -->
+    <a class="city-card ready" href="roteiro_orlando.html">
+      <div class="card-banner" style="background:linear-gradient(90deg,#4ade80,#2dd4bf)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 1</span><span class="card-badge badge-ready">✓ pronto</span></div>
+        <div class="card-city">Orlando</div>
+        <div class="card-state">Florida, FL</div>
+        <div class="card-dates">4 set (sex) → 10 set (qui)</div>
+        <div class="card-nights">6 noites · All Star Sports Disney Resort</div>
+        <div class="card-footer">Disney · Universal · Halloween · Mount Dora · Winter Garden <span class="card-arrow">→</span></div>
+      </div>
+    </a>
+
+    <!-- St. Augustine PRONTO -->
+    <a class="city-card ready" href="roteiro_st_augustine.html">
+      <div class="card-banner" style="background:linear-gradient(90deg,#60a5fa,#a78bfa)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 2</span><span class="card-badge badge-ready">✓ pronto</span></div>
+        <div class="card-city">St. Augustine</div>
+        <div class="card-state">Florida, FL</div>
+        <div class="card-dates">10 set (qui) → 11 set (sex)</div>
+        <div class="card-nights">1 noite · Old Powder House Inn</div>
+        <div class="card-footer">Centro histórico · Castillo · Flagler College · Lighthouse <span class="card-arrow">→</span></div>
+      </div>
+    </a>
+
+    <!-- Savannah EM BREVE -->
+    <div class="city-card soon">
+      <div class="card-banner" style="background:linear-gradient(90deg,#2dd4bf,#60a5fa)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 3</span><span class="card-badge badge-soon">em breve</span></div>
+        <div class="card-city">Savannah</div>
+        <div class="card-state">Georgia, GA</div>
+        <div class="card-dates">11 set (sex) → 13 set (dom)</div>
+        <div class="card-nights">2 noites · Justine Inn</div>
+        <div class="card-footer">Squares históricos · River St · cemitérios</div>
+      </div>
+    </div>
+
+    <!-- Greenville EM BREVE -->
+    <div class="city-card soon">
+      <div class="card-banner" style="background:linear-gradient(90deg,#a78bfa,#fb7185)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 4</span><span class="card-badge badge-soon">em breve</span></div>
+        <div class="card-city">Greenville</div>
+        <div class="card-state">South Carolina, SC</div>
+        <div class="card-dates">13 set (dom) → 14 set (seg)</div>
+        <div class="card-nights">1 noite · Courtyard Marriott Downtown</div>
+        <div class="card-footer">Falls Park · Main Street · parada de rota</div>
+      </div>
+    </div>
+
+    <!-- Asheville EM BREVE -->
+    <div class="city-card soon">
+      <div class="card-banner" style="background:linear-gradient(90deg,#f97316,#fbbf24)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 5</span><span class="card-badge badge-soon">em breve</span></div>
+        <div class="card-city">Asheville</div>
+        <div class="card-state">North Carolina, NC</div>
+        <div class="card-dates">14 set (seg) → 18 set (sex)</div>
+        <div class="card-nights">3 noites · Pink House</div>
+        <div class="card-footer">Blue Ridge Pkwy · Biltmore · cervejarias</div>
+      </div>
+    </div>
+
+    <!-- Staunton PRONTO -->
+    <a class="city-card ready" href="roteiro_staunton.html">
+      <div class="card-banner" style="background:linear-gradient(90deg,#888,#555)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 6</span><span class="card-badge badge-ready">✓ pronto</span></div>
+        <div class="card-city">Staunton</div>
+        <div class="card-state">Virginia, VA</div>
+        <div class="card-dates">18 set (sex) → 19 set (sáb)</div>
+        <div class="card-nights">1 noite · Frederick House</div>
+        <div class="card-footer">Centro histórico · Zynodoa · Frontier Museum <span class="card-arrow">→</span></div>
+      </div>
+    </a>
+
+    <!-- Williamsburg EM BREVE -->
+    <div class="city-card soon">
+      <div class="card-banner" style="background:linear-gradient(90deg,#fb7185,#f97316)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 7</span><span class="card-badge badge-soon">em breve</span></div>
+        <div class="card-city">Williamsburg</div>
+        <div class="card-state">Virginia, VA</div>
+        <div class="card-dates">19 set (sáb) → 21 set (seg)</div>
+        <div class="card-nights">2 noites · Cedar os Williamsburg</div>
+        <div class="card-footer">Colonial Williamsburg · Jamestown · Yorktown</div>
+      </div>
+    </div>
+
+    <!-- Washington DC EM BREVE -->
+    <div class="city-card soon">
+      <div class="card-banner" style="background:linear-gradient(90deg,#fbbf24,#4ade80)"></div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-num">etapa 8 · final</span><span class="card-badge badge-soon">em breve</span></div>
+        <div class="card-city">Washington DC</div>
+        <div class="card-state">District of Columbia</div>
+        <div class="card-dates">21 set (seg) → 26 set (sex)</div>
+        <div class="card-nights">5 noites · Royal Sonesta Dupont Circle</div>
+        <div class="card-footer">Monumentos · Smithsonian · Georgetown · voo de volta</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- stats -->
+  <div class="stats-row">
+    <div class="stat"><div class="stat-num" style="color:var(--amber)">23</div><div class="stat-label">dias de viagem</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--green)">9</div><div class="stat-label">cidades</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--blue)">~9.400</div><div class="stat-label">km de estrada</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--teal)">2</div><div class="stat-label">halloweens</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--coral)">1</div><div class="stat-label">road trip épico</div></div>
+  </div>
+</section>
+
+<footer>
+  Viagem EUA 2026 · roteiros atualizados ao longo do planejamento
+</footer>
+
+<script>
+// ── CONTAGEM REGRESSIVA ──
+function updateCountdown(){
+  const target = new Date('2026-09-03T23:15:00-03:00');
+  const now = new Date();
+  const diff = target - now;
+  if(diff <= 0){
+    document.getElementById('countdown').innerHTML = '<div style="font-family:\'DM Mono\',monospace;color:var(--amber);font-size:1.2rem">Viagem em andamento! ✈️</div>';
+    return;
+  }
+  const d = Math.floor(diff/86400000);
+  const h = Math.floor((diff%86400000)/3600000);
+  const m = Math.floor((diff%3600000)/60000);
+  const s = Math.floor((diff%60000)/1000);
+  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+// ── INTERSECTION OBSERVER para animações ao scroll ──
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.style.animationPlayState='running';
+  });
+},{threshold:0.1});
+document.querySelectorAll('.route-path,.city-dot').forEach(el=>{
+  el.style.animationPlayState='paused';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
