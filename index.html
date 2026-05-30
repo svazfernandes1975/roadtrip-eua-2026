@@ -52,21 +52,9 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overfl
 .map-wrap{position:relative;margin-top:2rem}
 .route-svg{width:100%;max-width:520px;display:block;margin:0 auto}
 
-/* animação da rota */
-.route-path{stroke-dasharray:2000;stroke-dashoffset:2000;animation:drawRoute 3s ease forwards 0.5s}
-@keyframes drawRoute{to{stroke-dashoffset:0}}
-
-.city-dot{opacity:0;animation:popIn .3s ease forwards}
-.city-dot:nth-child(1){animation-delay:0.6s}
-.city-dot:nth-child(2){animation-delay:0.9s}
-.city-dot:nth-child(3){animation-delay:1.2s}
-.city-dot:nth-child(4){animation-delay:1.5s}
-.city-dot:nth-child(5){animation-delay:1.8s}
-.city-dot:nth-child(6){animation-delay:2.1s}
-.city-dot:nth-child(7){animation-delay:2.4s}
-.city-dot:nth-child(8){animation-delay:2.7s}
-.city-dot:nth-child(9){animation-delay:3.0s}
-@keyframes popIn{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+/* animação da rota — controlada via JS */
+.route-path{stroke-dasharray:2000;stroke-dashoffset:2000}
+.city-dot{opacity:0;transition:opacity 0.4s ease}
 
 /* ── CARDS DE CIDADES ── */
 .cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
@@ -162,7 +150,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
       <svg class="route-svg" viewBox="0 0 340 640" xmlns="http://www.w3.org/2000/svg" style="font-family:'DM Mono',monospace">
         <rect width="340" height="640" fill="#0d1117" rx="12"/>
         <path d="M200,20 Q230,60 235,130 Q240,190 228,250 Q220,290 218,330 Q225,370 220,410 Q212,450 205,490 Q198,520 192,550 Q185,570 178,585" stroke="#1a3a5a" stroke-width="16" fill="none" opacity="0.3"/>
-        <path class="route-path"
+        <path class="route-path" id="routePath"
           d="M175,578 C168,548 162,522 160,496 C158,470 168,455 178,444 C186,436 188,412 186,384 C184,360 165,325 148,292 C140,278 138,272 138,265 C138,244 150,220 165,196 C176,178 188,173 195,165 C195,153 192,128 190,98"
           stroke="#fbbf24" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         <!-- MIAMI -->
@@ -298,7 +286,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <div class="card-nights">2 noites · Justine Inn</div>
         <div class="card-footer">Squares · River St · Mercer House · Bonaventure <span class="card-arrow">→</span></div>
       </div>
-    </div>
+    </a>
 
     <!-- Greenville EM BREVE -->
     <a class="city-card ready" href="roteiro_greenville.html">
@@ -311,7 +299,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <div class="card-nights">1 noite · Courtyard Marriott Downtown</div>
         <div class="card-footer">Falls Park · Liberty Bridge · Jianna · Main St <span class="card-arrow">→</span></div>
       </div>
-    </div>
+    </a>
 
     <!-- Asheville EM BREVE -->
     <div class="city-card soon">
@@ -326,18 +314,18 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
       </div>
     </div>
 
-    <!-- Staunton PRONTO -->
-    <a class="city-card ready" href="roteiro_staunton.html">
+    <!-- Staunton EM BREVE -->
+    <div class="city-card soon">
       <div class="card-banner" style="background:linear-gradient(90deg,#888,#555)"></div>
       <div class="card-body">
-        <div class="card-top"><span class="card-num">etapa 6</span><span class="card-badge badge-ready">✓ pronto</span></div>
+        <div class="card-top"><span class="card-num">etapa 6</span><span class="card-badge badge-soon">em breve</span></div>
         <div class="card-city">Staunton</div>
         <div class="card-state">Virginia, VA</div>
         <div class="card-dates">18 set (sex) → 19 set (sáb)</div>
         <div class="card-nights">1 noite · Frederick House</div>
-        <div class="card-footer">Centro histórico · Zynodoa · Frontier Museum <span class="card-arrow">→</span></div>
+        <div class="card-footer">Centro histórico · Zynodoa · Frontier Museum</div>
       </div>
-    </a>
+    </div>
 
     <!-- Williamsburg EM BREVE -->
     <div class="city-card soon">
@@ -403,16 +391,51 @@ function updateCountdown(){
 updateCountdown();
 setInterval(updateCountdown,1000);
 
-// ── INTERSECTION OBSERVER para animações ao scroll ──
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.style.animationPlayState='running';
+// ── ANIMAÇÃO DA ROTA — JS puro, compatível com mobile ──
+function animateRoute() {
+  var path = document.getElementById('routePath');
+  if (!path) return;
+
+  // Mede o comprimento real do path
+  var len = path.getTotalLength ? path.getTotalLength() : 1800;
+  path.style.strokeDasharray = len;
+  path.style.strokeDashoffset = len;
+  path.style.transition = 'none';
+
+  // Força reflow
+  path.getBoundingClientRect();
+
+  // Anima o traço de Miami (baixo) para DC (cima)
+  path.style.transition = 'stroke-dashoffset 3s ease-in-out';
+  path.style.strokeDashoffset = '0';
+
+  // Aparece cada cidade sequencialmente
+  var dots = document.querySelectorAll('.city-dot');
+  dots.forEach(function(dot, i) {
+    setTimeout(function() {
+      dot.style.opacity = '1';
+    }, 600 + i * 300);
   });
-},{threshold:0.1});
-document.querySelectorAll('.route-path,.city-dot').forEach(el=>{
-  el.style.animationPlayState='paused';
-  observer.observe(el);
-});
+}
+
+// Dispara quando a seção do mapa entra na tela
+var mapSection = document.querySelector('.map-section');
+var animated = false;
+
+if (mapSection && 'IntersectionObserver' in window) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !animated) {
+        animated = true;
+        setTimeout(animateRoute, 200);
+      }
+    });
+  }, {threshold: 0.3});
+  obs.observe(mapSection);
+} else {
+  // Fallback para browsers sem IntersectionObserver (alguns mobile antigos)
+  setTimeout(animateRoute, 500);
+}
 </script>
 </body>
 </html>
