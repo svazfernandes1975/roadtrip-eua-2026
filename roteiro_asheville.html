@@ -6,21 +6,24 @@
 <title>Roteiro Asheville — 14 a 18/set</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--border:#2a2a2a;--border2:#333;--text:#e8e8e8;--muted:#555;--muted2:#888;--green:#4ade80;--gdim:#1a3a2a;--amber:#fbbf24;--adim:#2a1f0a;--blue:#60a5fa;--bdim:#0f1e35;--coral:#fb7185;--cdim:#2a0f14;--purple:#a78bfa;--pdim:#1a1130;--teal:#2dd4bf;--tdim:#0a1e1c;--orange:#f97316;--odim:#1f1208;}
+:root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--border:#2a2a2a;--border2:#333;--text:#e8e8e8;--muted:#555;--muted2:#888;--green:#4ade80;--gdim:#1a3a2a;--amber:#fbbf24;--adim:#2a1f0a;--blue:#60a5fa;--bdim:#0f1e35;--coral:#fb7185;--cdim:#2a0f14;--purple:#a78bfa;--pdim:#1a1130;--teal:#2dd4bf;--tdim:#0a1e1c;--orange:#f97316;--odim:#1f1208}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif}
 .page{max-width:860px;margin:0 auto;padding:3rem 2rem 5rem}
-.btn-back{display:inline-flex;align-items:center;gap:5px;background:var(--bg2);border:1px solid var(--border2);border-radius:50px;padding:.35rem .9rem;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-decoration:none;transition:border-color .2s,color .2s;margin-bottom:1.5rem}.btn-back:hover{border-color:var(--amber);color:var(--amber)}
+.btn-back{display:inline-flex;align-items:center;gap:5px;background:var(--bg2);border:1px solid var(--border2);border-radius:50px;padding:.35rem .9rem;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-decoration:none;transition:border-color .2s,color .2s;margin-bottom:1.5rem}
+.btn-back:hover{border-color:var(--amber);color:var(--amber)}
 header{margin-bottom:3rem;border-bottom:1px solid var(--border2);padding-bottom:2rem}
 .ey{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
 h1{font-size:2.4rem;font-weight:800;line-height:1.1;margin-bottom:.5rem}
 .hs{font-size:.9rem;color:var(--muted2);margin-bottom:1.5rem}
 .hst{display:flex;gap:2rem;flex-wrap:wrap}
-.sv{font-size:1.3rem;font-weight:700}.sl{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.sv{font-size:1.3rem;font-weight:700}
+.sl{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
 .day{margin-bottom:2.5rem;border:1px solid var(--border2);border-radius:16px;overflow:hidden}
-.dh{padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--border)}
+.dh{padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--border);flex-wrap:wrap}
 .dn{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;flex-shrink:0}
-.dt{font-size:1rem;font-weight:700}.dd{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.dt{font-size:1rem;font-weight:700}
+.dd{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-left:auto}
 .items{padding:.5rem 0}
 .item{display:flex;padding:0 1.5rem}
 .itl{display:flex;flex-direction:column;align-items:center;min-width:56px;padding-top:.75rem}
@@ -42,362 +45,65 @@ h1{font-size:2.4rem;font-weight:800;line-height:1.1;margin-bottom:.5rem}
 .pr{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
 .pc{font-family:'DM Mono',monospace;font-size:10px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:3px 8px;color:var(--muted2)}
 .pc strong{color:var(--text)}
-.lnk{margin-top:6px}.lnk a{font-family:'DM Mono',monospace;font-size:10px;color:var(--blue);text-decoration:none;border-bottom:1px solid #1e3a5f}
+.lnk{margin-top:6px}
+.lnk a{font-family:'DM Mono',monospace;font-size:10px;color:var(--blue);text-decoration:none;border-bottom:1px solid #1e3a5f}
 .bath{margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.78rem;background:#111820;border-left:2px solid var(--blue);color:#93c5fd}
 .opt{font-family:'DM Mono',monospace;font-size:10px;background:#1f1205;color:#f97316;border:1px solid #4a2a0a;padding:1px 7px;border-radius:20px}
 .alt-box{margin-top:10px;background:#111;border:1px solid var(--border2);border-radius:10px;padding:12px}
 .alt-title{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em}
 .alt-item{font-size:.8rem;color:var(--muted2);line-height:2}
-.mapw{margin-top:12px;background:#0d1117;border:1px solid var(--border2);border-radius:12px;padding:14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.mapt{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
-.maplnk{margin-top:8px;font-family:'DM Mono',monospace;font-size:10px}
-.maplnk a{color:var(--blue);text-decoration:none;border-bottom:1px solid #1e3a5f}
-/* day colors */
-.dh1{background:#12100a}.dn1{background:var(--adim);color:var(--amber)}.dc1{background:var(--amber)}
-.dh2{background:#0f1e1c}.dn2{background:var(--tdim);color:var(--teal)}.dc2{background:var(--teal)}
-.dh3{background:#0f1825}.dn3{background:var(--bdim);color:var(--blue)}.dc3{background:var(--blue)}
-.dh4{background:#1a0f20}.dn4{background:var(--pdim);color:var(--purple)}.dc4{background:var(--purple)}
-.dh5{background:#111}.dn5{background:var(--bg3);color:var(--muted2);border:1px solid var(--border)}.dc5{background:var(--muted)}
-@media(max-width:600px){.page{padding:1.5rem 1rem 4rem}h1{font-size:1.8rem}.hst{gap:1.2rem;display:grid;grid-template-columns:1fr 1fr}.dh{flex-wrap:wrap;gap:.5rem}.dd{margin-left:0;width:100%;font-size:10px}.itl{min-width:44px}.itt{font-size:10px}.ib{padding:.6rem 0 .6rem .75rem}.itl2{font-size:.88rem}.idesc{font-size:.8rem}.pr{gap:5px}.pc{font-size:9px;padding:2px 6px}.tag{font-size:9px;padding:2px 6px}.notice{font-size:.75rem;padding:7px 10px}}@media(max-width:400px){.hst{grid-template-columns:1fr}}
+.map-block{margin-top:12px;background:#0d1117;border:1px solid var(--border2);border-radius:12px;padding:14px}
+.map-block-title{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.map-point{display:flex;gap:8px;margin-bottom:5px}
+.map-point-dot{color:var(--amber);font-size:11px;min-width:10px;margin-top:1px}
+.map-point-name{color:var(--text);font-size:.8rem;font-weight:600}
+.map-point-desc{color:var(--muted2);font-size:.78rem}
+.map-info{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin:8px 0}
+.map-btn{display:inline-flex;align-items:center;gap:8px;background:#0d1e35;border:1px solid #1e3a5f;border-radius:8px;padding:.7rem 1.2rem;font-family:'DM Mono',monospace;font-size:12px;color:#60a5fa;text-decoration:none;transition:background .2s,border-color .2s}
+.map-btn:hover{background:#112040;border-color:#3b82f6}
+.costs{background:#111;border:1px solid var(--border2);border-radius:12px;padding:1.25rem 1.5rem;margin-top:1rem}
+.costs-title{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+.costs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px}
+.cost-item{background:var(--bg3);border-radius:8px;padding:10px}
+.cost-label{font-size:11px;color:var(--muted2);margin-bottom:3px}
+.cost-value{font-size:1.1rem;font-weight:700}
+.cost-note{font-size:10px;color:var(--muted)}
+@media(max-width:600px){.page{padding:1.5rem 1rem 4rem}h1{font-size:1.8rem}.hst{gap:1.2rem;display:grid;grid-template-columns:1fr 1fr}.dh{gap:.5rem}.dd{margin-left:0;width:100%;font-size:10px}.itl{min-width:44px}.itt{font-size:10px}.ib{padding:.6rem 0 .6rem .75rem}.itl2{font-size:.88rem}.idesc{font-size:.8rem}.pr{gap:5px}.pc{font-size:9px;padding:2px 6px}.tag{font-size:9px;padding:2px 6px}.notice{font-size:.75rem;padding:7px 10px}}
+@media(max-width:400px){.hst{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="page">
 <a class="btn-back" href="index.html">← início</a>
-<header>
-  <div class="ey">roteiro de viagem · etapa 5</div>
-  <h1>Asheville, NC</h1>
-  <div class="hs">14 set (seg) → 18 set (sex) · 3 noites · Pink House</div>
-  <div class="hst">
-    <div><div class="sv" style="color:var(--orange)">3</div><div class="sl">noites</div></div>
-    <div><div class="sv" style="color:var(--teal)">Biltmore</div><div class="sl">terça</div></div>
-    <div><div class="sv" style="color:var(--blue)">Blue Ridge</div><div class="sl">quarta</div></div>
-    <div><div class="sv" style="color:var(--blue)">104 km · 1h15</div><div class="sl">de Greenville</div></div>
-  </div>
-</header>
-
-<!-- DIA 14 — SEG -->
-<div class="day">
-  <div class="dh dh1"><span class="dn dn1">Dia 11</span><span class="dt">Chegada + Lexington Ave + Glassworks</span><span class="dd">Seg 14/set</span></div>
-  <div class="items">
-
-    <div class="item"><div class="itl"><span class="itt">14h</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Saída de Greenville para Asheville</div>
-      <div class="idesc">US-25 N → I-26 E. Nos últimos 30 km a paisagem muda completamente — de planície para montanha. A subida para as Blue Ridge é gradual e bonita.</div>
-      <div class="pr"><div class="pc">distância: <strong>~104 km</strong></div><div class="pc">tempo: <strong>~1h15</strong></div><div class="pc">chegada: <strong>~15h15</strong></div></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">15h15</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Check-in — Pink House</div>
-      <div class="idesc">Confirme estacionamento com o hotel — Asheville tem ruas íngremes e estacionamento limitado no centro.</div>
-      <div class="tags"><span class="tag tgr">hotel · base</span></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">16h</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Lexington Avenue + Lexington Glassworks</div>
-      <div class="idesc">A rua mais autêntica de Asheville — arte de rua, lojas independentes, galerias. Perfeita para uma chegada leve. A <strong>Lexington Glassworks</strong> fica aqui — estúdio de vidro soprado com demonstrações ao vivo (gratuitas) e galeria de peças à venda. Hipnótico para casal.</div>
-      <div class="tags"><span class="tag tp">arte · passeio leve</span></div>
-      <div class="pr"><div class="pc">demonstração: <strong>grátis</strong></div><div class="pc">aula de sopro: <strong>~US$65–80 p/p</strong></div><div class="pc">estac.: <strong>lotes pagos ~US$2–3/h</strong></div></div>
-      <div class="lnk"><a href="https://www.lexingtonglassworks.com" target="_blank">lexingtonglassworks.com</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">18h30</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">🚿 Pausa no hotel</div>
-      <div class="bath">🚿 Banho e saída para o primeiro jantar em Asheville ~19h30.</div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">19h30</span><div class="idc dc1"></div></div><div class="ib">
-      <div class="itl2">Jantar — centro de Asheville</div>
-      <div class="idesc"><strong>Tupelo Honey</strong> (Southern farm-to-table clássico de Asheville, ~US$25–35 p/p) ou <strong>Cúrate</strong> (tapas espanholas, muito bem avaliado para casal, ~US$30–45 p/p).</div>
-      <div class="tags"><span class="tag tg">jantar</span></div>
-      <div class="pr"><div class="pc">estimativa: <strong>~US$25–45 p/p</strong></div></div>
-    </div></div>
-
-  </div>
-</div>
-
-<!-- DIA 15 — TER -->
-<div class="day">
-  <div class="dh dh2"><span class="dn dn2">Dia 12</span><span class="dt">Biltmore Estate — dia inteiro</span><span class="dd">Ter 15/set</span></div>
-  <div class="items">
-
-    <div class="item"><div class="itl"><span class="itt">9h</span><div class="idc dc2"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Saída para o Biltmore Estate</div>
-      <div class="idesc">Terça é ideal — bem menos gente que fim de semana. Chegue 45 min antes do seu horário de entrada para estacionar e pegar o shuttle até a casa.</div>
-      <div class="pr"><div class="pc">do hotel: <strong>~15 min de carro</strong></div><div class="pc">entrada reservada: <strong>10h</strong></div></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">10h–17h</span><div class="idc dc2"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Biltmore Estate — dia inteiro</div>
-      <div class="idesc">A maior casa particular dos EUA — 250 cômodos, 8.000 acres, construída em 1895 por George Vanderbilt. Ordem recomendada: <strong>Biltmore House</strong> (tour self-guided com áudio, ~2h) → <strong>jardins formais e walled garden</strong> (~1h) → almoço no <strong>Stable Café</strong> ou <strong>Deerpark Restaurant</strong> (~US$20–35 p/p) → <strong>Antler Hill Village</strong> (vinícola com degustação inclusa na entrada, loja, Vila).</div>
-      <div class="tags"><span class="tag tg">mansão · dia inteiro</span></div>
-      <div class="pr">
-        <div class="pc">ingresso: <strong>~US$80–85 p/p online</strong></div>
-        <div class="pc">economiza: <strong>US$10 comprando online</strong></div>
-        <div class="pc">estac.: <strong>grátis</strong></div>
-        <div class="pc">shuttle interno: <strong>US$15 p/p</strong></div>
-      </div>
-      <div class="notice na">⚠ Reserva obrigatória com horário de entrada em biltmore.com — esgota em setembro. Reserve com pelo menos 7 dias de antecedência.</div>
-      <div class="notice ns">✨ A degustação de vinhos na Biltmore Winery está inclusa no ingresso — não pule. Os vinhos são surpreendentemente bons.</div>
-      <div class="lnk"><a href="https://www.biltmore.com/visit/tickets/" target="_blank">biltmore.com/visit/tickets — reserve aqui</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">17h30</span><div class="idc dc2"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">🚿 Pausa no hotel</div>
-      <div class="bath">🚿 Dia longo no Biltmore. Banho antes do jantar.</div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">19h</span><div class="idc dc2"></div></div><div class="ib">
-      <div class="itl2">Jantar — Asheville</div>
-      <div class="idesc"><strong>Wicked Weed Brewing</strong> (cervejaria icônica, comida boa, animado, ~US$20–30 p/p) ou <strong>Burial Beer Co.</strong> (mais intimista, ~US$18–28 p/p).</div>
-      <div class="tags"><span class="tag tg">jantar · cervejaria</span></div>
-      <div class="pr"><div class="pc">estimativa: <strong>~US$20–30 p/p</strong></div></div>
-    </div></div>
-
-  </div>
-</div>
-
-<!-- DIA 16 — QUA -->
-<div class="day">
-  <div class="dh dh3"><span class="dn dn3">Dia 13</span><span class="dt">Blue Ridge Parkway — Mt. Mitchell + Switzerland Cafe</span><span class="dd">Qua 16/set</span></div>
-  <div class="items">
-
-    <div class="item"><div class="itl"><span class="itt">8h</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Saída cedo — acesso ao Parkway</div>
-      <div class="idesc">Sair às 8h é fundamental — névoa matinal nos vales, luz mais bonita e quarta sem tráfego. Acesse o Parkway pelo Folk Art Center (MP 382) — US-70 E de Asheville, ~15 min.</div>
-      <div class="pr"><div class="pc">entrada Parkway: <strong>grátis</strong></div><div class="pc">acesso: <strong>MP 382 · Folk Art Center</strong></div></div>
-      <div class="notice na">⚠ Verifique status do Parkway antes de sair — alguns trechos ainda têm restrições pós-Furacão Helene. O trecho MP 382→355 (Asheville→Mt. Mitchell) foi reaberto em set/2025. Confirme em <a href="https://www.nps.gov/blri" target="_blank" style="color:#f9a8b4">nps.gov/blri</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">8h30</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Haw Creek Valley Overlook (MP ~375)</div>
-      <div class="idesc">Primeira parada saindo de Asheville. Vista do vale de Haw Creek e das montanhas ao fundo. Curto — 5 min para as fotos.</div>
-      <div class="tags"><span class="tag tb">mirante</span></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">8h45</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Bull Gap (MP ~373)</div>
-      <div class="idesc">Ponto de parada com acesso a trilhas curtas e vista panorâmica. Bom para esticar as pernas antes das subidas maiores.</div>
-      <div class="tags"><span class="tag tb">mirante · trilha</span></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">9h15</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Craggy Gardens + Craggy Dome Overlook (MP 364)</div>
-      <div class="idesc">A ~5.000 pés de altitude — camadas infinitas de montanhas azuis. Em setembro começa a folhagem nas bordas. O <strong>Craggy Dome Overlook</strong> é o mirante mais alto e dramático da área. Trilha curta até Craggy Pinnacle (~0,8 milha ida e volta) para vista ainda melhor — ~45 min.</div>
-      <div class="tags"><span class="tag tc">mirante · imperdível</span></div>
-      <div class="pr"><div class="pc">entrada: <strong>grátis</strong></div><div class="pc">trilha opcional: <strong>~45 min</strong></div></div>
-      <div class="notice ns">✨ Este é o ponto mais fotogênico do trecho. Em dia limpo dá para ver 5 estados. Com névoa matinal fica cinematográfico.</div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">10h30</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Ridge Junction Overlook (MP 355.3)</div>
-      <div class="idesc">Última parada antes de entrar no Mt. Mitchell State Park. Vista da junção das cristas — ponto de transição entre o Parkway e o parque estadual.</div>
-      <div class="tags"><span class="tag tb">mirante</span></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">10h45</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Mount Mitchell State Park (MP 355.4)</div>
-      <div class="idesc">O ponto mais alto a leste do Mississippi — 6.684 pés (2.037 m). Trilha pavimentada de 400m até a plataforma de observação no topo com vista 360°. Café e loja abertos maio–outubro. <strong>Leve uma jaqueta</strong> — a temperatura no cume é 15–20°C mais fria que Asheville.</div>
-      <div class="tags"><span class="tag tc">topo · 2.037m · imperdível</span></div>
-      <div class="pr"><div class="pc">entrada: <strong>grátis</strong></div><div class="pc">horário: <strong>7h–21h</strong></div><div class="pc">trilha ao topo: <strong>~400m · 15 min</strong></div></div>
-      <div class="notice nt">💡 Fique atento ao clima — o cume frequentemente fica encoberto por nuvens. Se Asheville estiver com sol, Mt. Mitchell geralmente está limpo. Se estiver nublado em Asheville, pode estar dentro da nuvem no topo.</div>
-      <div class="lnk"><a href="https://www.ncparks.gov/state-parks/mount-mitchell-state-park" target="_blank">ncparks.gov/mount-mitchell</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">11h30</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Deerlick Gap Overlook</div>
-      <div class="idesc">Mirante no caminho para o Switzerland Cafe. Vista diferente — mais para o vale leste das montanhas.</div>
-      <div class="tags"><span class="tag tb">mirante</span></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">12h30</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Switzerland Cafe — almoço ★ (MP 334)</div>
-      <div class="idesc">Parada mais especial do dia — café e restaurante histórico em Little Switzerland, diretamente no Parkway. BBQ defumado em forno de madeira, truta defumada local, sanduíches artesanais. Um dos raros restaurantes diretamente no Blue Ridge Parkway. Aberto a partir das 11h.</div>
-      <div class="tags"><span class="tag tg">almoço · histórico</span></div>
-      <div class="pr"><div class="pc">estimativa: <strong>~US$15–25 p/p</strong></div><div class="pc">MP: <strong>334 · Little Switzerland</strong></div></div>
-      <div class="notice ns">✨ Ao lado fica a <strong>Little Switzerland Books & Beans</strong> — livraria de 3 andares com café. Perfeita para 20 min de pausa depois do almoço antes de voltar.</div>
-      <div class="lnk"><a href="https://switzerlandcafe.com" target="_blank">switzerlandcafe.com</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">13h30</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Volta direta para Asheville</div>
-      <div class="idesc">Retorno pela mesma estrada sem paradas. De Little Switzerland (MP 334) até Asheville são ~48 km de Parkway + acesso — ~1h15 de viagem.</div>
-      <div class="pr"><div class="pc">Switzerland Cafe → Asheville: <strong>~1h15</strong></div><div class="pc">chegada: <strong>~14h45</strong></div></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">15h</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">River Arts District</div>
-      <div class="idesc">Galpões industriais à beira do French Broad River com mais de 200 ateliers de artistas abertos ao público. Completamente diferente do centro turístico — arte real, preços razoáveis, atmosfera de trabalho.</div>
-      <div class="tags"><span class="tag tp">arte · ateliers</span></div>
-      <div class="pr"><div class="pc">entrada: <strong>grátis</strong></div><div class="pc">estac.: <strong>grátis nos lotes do distrito</strong></div></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">17h30</span><div class="idc dc3"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">🚿 Pausa no hotel</div>
-      <div class="bath">🚿 Dia longo de montanha. Banho antes do jantar.</div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">19h30</span><div class="idc dc3"></div></div><div class="ib">
-      <div class="itl2">Jantar — Rhubarb ou The Blackbird</div>
-      <div class="idesc"><strong>Rhubarb</strong> (farm-to-table premiado, ingredientes da Blue Ridge, ~US$40–55 p/p) ou <strong>The Blackbird</strong> (Southern cuisine intimista, muito bem avaliado para casal, ~US$35–50 p/p).</div>
-      <div class="tags"><span class="tag tg">jantar</span></div>
-      <div class="pr"><div class="pc">estimativa: <strong>~US$35–55 p/p</strong></div></div>
-    </div></div>
-
-  </div>
-</div>
-
-<!-- DIA 17 — QUI -->
-<div class="day">
-  <div class="dh dh4"><span class="dn dn4">Dia 14</span><span class="dt">Downtown Urban Trail + Grove Arcade + Woolworth Walk + Omni</span><span class="dd">Qui 17/set</span></div>
-  <div class="items">
-
-    <div class="item"><div class="itl"><span class="itt">9h30</span><div class="idc dc4"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Asheville Downtown Urban Trail — esculturas</div>
-      <div class="idesc">Circuito a pé de 1,7 milha com 30 esculturas de bronze espalhadas pelas calçadas — cada uma conta um capítulo da história de Asheville. Começa na Pritchard Park. App "Asheville Urban Trail" gratuito para identificar cada peça.</div>
-      <div class="tags"><span class="tag ta">caminhada · arte urbana</span></div>
-      <div class="pr"><div class="pc">entrada: <strong>grátis</strong></div><div class="pc">duração: <strong>~1h30</strong></div><div class="pc">estac.: <strong>lotes centro ~US$2/h</strong></div></div>
-
-      <!-- MAPA DOWNTOWN ASHEVILLE -->
-      <div class="mapw">
-        <div class="mapt">mapa do passeio a pé · Asheville downtown</div>
-        <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:0;height:auto;display:block;font-family:'DM Mono',monospace">
-          <rect width="360" height="300" fill="#0d1117" rx="6"/>
-          <!-- Lexington Ave (diagonal norte) -->
-          <line x1="60" y1="30" x2="160" y2="130" stroke="#1e1e1e" stroke-width="5"/>
-          <text x="60" y="25" fill="#333" font-size="7">Lexington Ave</text>
-          <!-- Biltmore Ave (vertical principal) -->
-          <rect x="178" y="20" width="7" height="270" fill="#2a2a2a" rx="1"/>
-          <text x="182" y="18" fill="#3a3a3a" font-size="8" text-anchor="middle">Biltmore Ave</text>
-          <!-- College St (horizontal) -->
-          <rect x="40" y="118" width="300" height="7" fill="#222" rx="1"/>
-          <text x="44" y="114" fill="#333" font-size="7">College St</text>
-          <!-- Haywood St -->
-          <rect x="40" y="168" width="250" height="6" fill="#1e1e1e" rx="1"/>
-          <text x="44" y="164" fill="#333" font-size="7">Haywood St</text>
-          <!-- Wall St -->
-          <rect x="40" y="200" width="200" height="5" fill="#1a1a1a" rx="1"/>
-          <text x="44" y="196" fill="#333" font-size="7">Wall St</text>
-          <!-- Pack Square -->
-          <rect x="155" y="128" width="55" height="35" fill="#0a1a0a" rx="3" stroke="#1a3a2a" stroke-width="1"/>
-          <text x="182" y="149" fill="#4ade80" font-size="7" text-anchor="middle">Pack Square</text>
-          <!-- ROTA -->
-          <polyline points="182,250 182,200 120,168 182,168 182,128 182,80 120,80 80,118 182,118" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5,3"/>
-          <!-- PONTOS -->
-          <circle cx="182" cy="252" r="9" fill="#fbbf24"/>
-          <text x="182" y="272" fill="#fbbf24" font-size="8" text-anchor="middle">Parking</text>
-          <circle cx="120" cy="168" r="6" fill="#fb7185"/>
-          <text x="105" y="164" fill="#fb7185" font-size="8" text-anchor="end">Grove Arcade</text>
-          <circle cx="182" cy="168" r="5" fill="#2dd4bf"/>
-          <text x="197" y="164" fill="#2dd4bf" font-size="8">Pritchard Park</text>
-          <text x="197" y="174" fill="#555" font-size="7">Urban Trail start</text>
-          <circle cx="80" cy="118" r="5" fill="#2dd4bf"/>
-          <text x="65" y="114" fill="#2dd4bf" font-size="8" text-anchor="end">Woolworth</text>
-          <circle cx="182" cy="80" r="5" fill="#a78bfa"/>
-          <text x="197" y="76" fill="#a78bfa" font-size="8">Pinball Museum</text>
-          <circle cx="120" cy="80" r="5" fill="#2dd4bf"/>
-          <text x="105" y="76" fill="#2dd4bf" font-size="8" text-anchor="end">Battery Park</text>
-          <text x="105" y="86" fill="#555" font-size="7" text-anchor="end">Book Exchange</text>
-          <!-- legenda -->
-          <rect x="220" y="200" width="130" height="88" fill="#0d1117" stroke="#2a2a2a" stroke-width="0.5" rx="4"/>
-          <circle cx="230" cy="214" r="4" fill="#fbbf24"/><text x="238" y="218" fill="#666" font-size="8">parking</text>
-          <circle cx="230" cy="230" r="4" fill="#2dd4bf"/><text x="238" y="234" fill="#666" font-size="8">Urban Trail / circuito</text>
-          <circle cx="230" cy="246" r="4" fill="#fb7185"/><text x="238" y="250" fill="#666" font-size="8">Grove Arcade</text>
-          <circle cx="230" cy="262" r="4" fill="#a78bfa"/><text x="238" y="266" fill="#666" font-size="8">Pinball Museum</text>
-          <circle cx="230" cy="278" r="4" fill="#2dd4bf"/><text x="238" y="282" fill="#666" font-size="8">Woolworth Walk</text>
-          <text x="8" y="294" fill="#333" font-size="7">circuito: ~2,5 km · ~1h30 sem paradas</text>
-        </svg>
-        <div class="maplnk"><a href="https://www.google.com/maps/search/Asheville+downtown+Pack+Square+Urban+Trail" target="_blank">↗ Abrir no Google Maps</a></div>
-      </div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">11h</span><div class="idc dc4"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Grove Arcade</div>
-      <div class="idesc">Mercado público histórico de 1929 — uma das arquiteturas mais deslumbrantes do centro. Lojas artesanais, restaurantes e galerias em ambiente de época.</div>
-      <div class="tags"><span class="tag tt">mercado histórico</span></div>
-      <div class="pr"><div class="pc">entrada: <strong>grátis</strong></div></div>
-      <div class="lnk"><a href="https://www.grovearcade.com" target="_blank">grovearcade.com</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">12h</span><div class="idc dc4"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Almoço — Biltmore Ave / Pack Square</div>
-      <div class="idesc"><strong>Biscuit Head</strong> (biscoitos do sul, brunch pesado, fila na rua, ~US$12–18 p/p) ou <strong>White Duck Taco</strong> (tacos locais, muito bem avaliados, ~US$12–16 p/p).</div>
-      <div class="tags"><span class="tag tg">almoço</span></div>
-      <div class="pr"><div class="pc">estimativa: <strong>~US$12–18 p/p</strong></div></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">13h30</span><div class="idc dc4"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Woolworth Walk</div>
-      <div class="idesc">Antiga lanchonete Woolworth's de 1938 com dois andares de arte de 160+ artistas locais. Um dos programas mais autênticos de Asheville.</div>
-      <div class="tags"><span class="tag tp">galeria · arte local</span></div>
-      <div class="pr"><div class="pc">entrada: <strong>grátis</strong></div></div>
-      <div class="lnk"><a href="https://woolworthwalk.com" target="_blank">woolworthwalk.com</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">14h30</span><div class="idc dc4"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Asheville Pinball Museum</div>
-      <div class="idesc">Mais de 70 fliperamas vintage (1950s–1990s) todos liberados com a entrada. Entrada ilimitada por tempo fixo. Ótimo para descansar as pernas depois de um dia de caminhada.</div>
-      <div class="tags"><span class="tag tt">museu · fliperama</span></div>
-      <div class="pr"><div class="pc">ingresso: <strong>~US$15 p/p</strong></div></div>
-      <div class="lnk"><a href="https://www.ashevillepinball.com" target="_blank">ashevillepinball.com</a></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">15h30</span><div class="idc dc4"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Battery Park Book Exchange <span class="opt">se der tempo</span></div>
-      <div class="idesc">Livraria com bar de champanhe dentro de um estacionamento histórico convertido. Ambiente absolutamente único — prateleiras do chão ao teto, leitura com taça na mão. 20 min de desvio que vale muito para casal.</div>
-      <div class="tags"><span class="tag tt">livraria · champanhe</span></div>
-      <div class="pr"><div class="pc">entrada: <strong>grátis</strong></div></div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">17h30</span><div class="idc dc4"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">🚿 Pausa no hotel — preparo para o jantar especial</div>
-      <div class="bath">🚿 Último jantar em Asheville — vale se arrumar bem. Saída para o Omni ~19h.</div>
-    </div></div>
-
-    <div class="item"><div class="itl"><span class="itt">19h</span><div class="idc dc4"></div></div><div class="ib">
-      <div class="itl2">Jantar — Omni Grove Park Inn ★ encerramento de Asheville</div>
-      <div class="idesc">Hotel histórico de 1913 no alto de Sunset Mountain. O Great Hall com suas duas lareiras de pedra de 36 pés vale a visita mesmo que não jantem lá. Melhor opção para encerrar Asheville com estilo.</div>
-      <div class="tags"><span class="tag tg">jantar especial ★</span></div>
-      <div class="alt-box">
-        <div class="alt-title">opções de jantar no Omni</div>
-        <div class="alt-item">
-          🌅 <strong style="color:var(--text)">Sunset Terrace</strong> — chophouse ao ar livre, vista panorâmica das montanhas e de Asheville iluminada. <span style="color:var(--amber)">~US$55–80 p/p</span> · sazonal, confirme abertura<br>
-          🍺 <strong style="color:var(--text)">Edison Craft Ales + Kitchen</strong> — mais casual, cervejas NC e comida regional, mesma vista. <span style="color:var(--amber)">~US$30–45 p/p</span><br>
-          🏛 <strong style="color:var(--text)">Vue 1913</strong> — brasserie americana, art deco, panorâmica 180° da Blue Ridge. <span style="color:var(--amber)">~US$45–65 p/p</span>
-        </div>
-        <div style="margin-top:8px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted)">estac.: self-park US$15 (1–3h) · 1ª hora grátis · valet US$45</div>
-      </div>
-      <div class="notice na">⚠ Sunset Terrace é sazonal — confirme abertura em setembro antes de reservar.</div>
-      <div class="lnk"><a href="https://www.omnihotels.com/hotels/asheville-grove-park/dining" target="_blank">omnihotels.com/asheville — dining</a></div>
-    </div></div>
-
-  </div>
-</div>
-
-<!-- DIA 18 — SEX -->
-<div class="day">
-  <div class="dh dh5"><span class="dn dn5">Dia 15</span><span class="dt">Saída para Staunton</span><span class="dd">Sex 18/set</span></div>
-  <div class="items">
-    <div class="item"><div class="itl"><span class="itt">9h</span><div class="idc dc5"></div><div class="iln"></div></div><div class="ib">
-      <div class="itl2">Checkout + saída para Staunton</div>
-      <div class="idesc">I-26 E → I-81 N → Staunton. Trecho atravessa a Shenandoah Valley com vista das Blue Ridge Mountains o dia inteiro. Pare para almoço em Wytheville ou Marion (~2h30 do caminho).</div>
-      <div class="tags"><span class="tag tb">rota</span></div>
-      <div class="pr"><div class="pc">distância: <strong>~510 km</strong></div><div class="pc">tempo: <strong>~5h</strong></div><div class="pc">chegada Staunton: <strong>~14h</strong></div></div>
-    </div></div>
-  </div>
-</div>
-
-<!-- resumo custos -->
-<div style="background:#111;border:1px solid var(--border2);border-radius:12px;padding:1.25rem 1.5rem;margin-top:1rem">
-  <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem">resumo de custos estimados · casal · 3 dias</div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px">
-    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">Biltmore (2 ingressos)</div><div style="font-size:1.1rem;font-weight:700;color:var(--coral)">~US$160–170</div><div style="font-size:10px;color:var(--muted)">comprar online (US$10 desc.)</div></div>
-    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">Blue Ridge / outros</div><div style="font-size:1.1rem;font-weight:700;color:var(--green)">~grátis</div><div style="font-size:10px;color:var(--muted)">Parkway, Mt. Mitchell, RAD</div></div>
-    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">refeições (3 dias)</div><div style="font-size:1.1rem;font-weight:700;color:var(--amber)">~US$280–400</div><div style="font-size:10px;color:var(--muted)">~US$90–130/dia casal</div></div>
-    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">total estimado</div><div style="font-size:1.1rem;font-weight:700;color:var(--text)">~US$440–570</div><div style="font-size:10px;color:var(--muted)">casal · sem hospedagem</div></div>
-  </div>
-</div>
-
+<header><div class="ey">roteiro de viagem · etapa 5</div><h1>Asheville</h1><div class="hs">14 set (seg) → 18 set (sex) · 4 noites · Pink House</div><div class="hst"><div><div class="sv" style="color:#2dd4bf">4</div><div class="sl">noites</div></div><div><div class="sv" style="color:#fbbf24">biltmore</div><div class="sl">maior casa dos EUA</div></div><div><div class="sv" style="color:#60a5fa">blue ridge</div><div class="sl">2.037m altitude</div></div><div><div class="sv" style="color:#fb7185">arts district</div><div class="sl">200+ estúdios</div></div></div></header>
+<div class="day"><div class="dh" style="background:#0f1010"><span class="dn" style="background:#1a2a2a;color:#2dd4bf">Dia 11</span><span class="dt">Chegada + Lexington Ave + Glassworks</span><span class="dd">Seg 14/set</span></div><div class="items"><div class="item"><div class="itl"><span class="itt">15h15</span><div class="idc" style="background:#2dd4bf"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Chegada de Greenville</div><div class="idesc">I-26 E direto até Asheville. Check-in no Pink House Inn.</div><div class="pr"><div class="pc">distância: <strong>~145 km</strong></div><div class="pc">tempo: <strong>~1h45</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">16h30</span><div class="idc" style="background:#2dd4bf"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Lexington Avenue</div><div class="idesc">A rua mais boêmia de Asheville — galerias, lojas de vinil, cafés e street art. A melhor introdução ao espírito da cidade.</div><div class="tags"><span class="tag tt">rua boêmia · cultura local</span></div><div class="map-block"><div class="map-block-title">Rota a pé · Lexington Ave + River Arts District</div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Início</span> <span class="map-point-desc">— Pink House Inn</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Lexington Avenue</span> <span class="map-point-desc">— rua boêmia com galerias, cafés e vinis</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Asheville Glassworks</span> <span class="map-point-desc">— vidro soprado ao vivo</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">River Arts District</span> <span class="map-point-desc">— distrito de 2 km com 200+ estúdios de artistas</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Fim</span> <span class="map-point-desc">— jantar no RAD ou volta ao centro</span></div></div><div class="map-info">~4 km · ~2h</div><a href="https://www.google.com/maps/dir/?api=1&origin=Pink+House+Inn+Asheville+NC&destination=River+Arts+District+Asheville+NC&waypoints=Lexington+Avenue+Asheville+NC|Asheville+Glassworks+Asheville+NC&travelmode=walking" target="_blank" class="map-btn">↗ Abrir rota no Google Maps</a></div></div></div>
+<div class="item"><div class="itl"><span class="itt">17h30</span><div class="idc" style="background:#2dd4bf"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Asheville Glassworks</div><div class="idesc">Demonstrações de vidro soprado ao vivo — artesãos trabalhando com vidro fundido a 2.000°C.</div><div class="tags"><span class="tag tt">galeria · ao vivo · grátis</span></div><div class="pr"><div class="pc">entrada: <strong>grátis</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">19h</span><div class="idc" style="background:#2dd4bf"></div></div><div class="ib"><div class="itl2">River Arts District + jantar</div><div class="idesc">Distrito de artistas em antigas fábricas às margens do French Broad River. Jantar no <strong>Gypsy Queen Kuisine</strong> (~US$15–25 p/p) ou <strong>White Duck Taco Shop</strong> (~US$12–20 p/p).</div><div class="tags"><span class="tag tg">jantar · RAD</span></div><div class="pr"><div class="pc">estimativa: <strong>~US$25–50 p/p</strong></div></div></div></div>
+</div></div>
+<div class="day"><div class="dh" style="background:#1a100a"><span class="dn" style="background:#3a2010;color:#fbbf24">Dia 12</span><span class="dt">Biltmore Estate — dia inteiro</span><span class="dd">Ter 15/set</span></div><div class="items"><div class="item"><div class="itl"><span class="itt">10h</span><div class="idc" style="background:#fbbf24"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Biltmore Estate</div><div class="idesc">A maior casa privada dos EUA — 8.000 m², 250 quartos, construída por George Vanderbilt em 1895. Vinhedos, jardins de Frederick Law Olmsted (criador do Central Park) e museu.</div><div class="tags"><span class="tag tc">estate · imperdível · dia inteiro</span></div><div class="pr"><div class="pc">ingresso: <strong>~US$80–85 p/p</strong></div><div class="pc">horário: <strong>9h–17h</strong></div></div><div class="notice na">⚠ Reserve online com 7+ dias de antecedência — esgota. Inclui jardins e vinhedos.</div><div class="lnk"><a href="https://www.biltmore.com" target="_blank">biltmore.com — reserve aqui</a></div></div></div>
+<div class="item"><div class="itl"><span class="itt">13h</span><div class="idc" style="background:#fbbf24"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Almoço no Stable Café — dentro do Biltmore</div><div class="idesc">Dentro do complexo, nas antigas estrebarias da mansão.</div><div class="tags"><span class="tag tg">almoço</span></div><div class="pr"><div class="pc">estimativa: <strong>~US$20–35 p/p</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">15h</span><div class="idc" style="background:#fbbf24"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Vinhedos + Degustação</div><div class="idesc">A vinícola do Biltmore é a mais visitada dos EUA. Degustação grátis inclusa no ingresso.</div><div class="tags"><span class="tag tt">vinícola · degustação grátis</span></div></div></div>
+<div class="item"><div class="itl"><span class="itt">19h</span><div class="idc" style="background:#fbbf24"></div></div><div class="ib"><div class="itl2">Jantar em Asheville</div><div class="idesc"><strong>Curate</strong> (tapas espanholas premiado, ~US$40–60 p/p) ou <strong>Jargon</strong> (~US$35–50 p/p).</div><div class="tags"><span class="tag tg">jantar</span></div><div class="pr"><div class="pc">estimativa: <strong>~US$40–60 p/p</strong></div></div><div class="notice na">⚠ Reserve — Curate é o mais disputado de Asheville.</div></div></div>
+</div></div>
+<div class="day"><div class="dh" style="background:#0a1020"><span class="dn" style="background:#1a2040;color:#60a5fa">Dia 13</span><span class="dt">Blue Ridge Parkway — Craggy Gardens + Mt. Mitchell</span><span class="dd">Qua 16/set</span></div><div class="items"><div class="item"><div class="itl"><span class="itt">8h30</span><div class="idc" style="background:#60a5fa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Saída pela Blue Ridge Parkway</div><div class="idesc">Entre na BRP pela MP 382 (saída de Asheville). Limite 45 mph — uma das rodovias cênicas mais bonitas do mundo.</div><div class="tags"><span class="tag tc">blue ridge parkway · cênico</span></div><div class="notice na">⚠ Verifique status em nps.gov/blri antes — trecho MP 355→334 fechado desde furacão Helene. Mt. Mitchell acessível pelo lado de Asheville.</div><div class="lnk"><a href="https://www.nps.gov/blri" target="_blank">nps.gov/blri — status da rodovia</a></div><div class="map-block"><div class="map-block-title">Blue Ridge Parkway — trecho acessível set/2025</div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Início</span> <span class="map-point-desc">— Asheville — entrada MP 382</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Craggy Gardens (MP 364)</span> <span class="map-point-desc">— jardim de rododendros a 1.700m de altitude</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Mount Mitchell State Park</span> <span class="map-point-desc">— ponto mais alto do leste dos EUA — 2.037m</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Black Mountain</span> <span class="map-point-desc">— cidadezinha charmosa para almoço</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Fim</span> <span class="map-point-desc">— volta a Asheville pela NC-9</span></div></div><div class="map-info">~120 km · ~4h com paradas · MP 355→334 fechado (furacão Helene)</div><a href="https://www.google.com/maps/dir/?api=1&origin=Asheville+NC&destination=Mount+Mitchell+State+Park+NC&waypoints=Craggy+Gardens+Blue+Ridge+Parkway+NC|Black+Mountain+NC&travelmode=driving" target="_blank" class="map-btn">↗ Abrir rota no Google Maps</a></div></div></div>
+<div class="item"><div class="itl"><span class="itt">9h30</span><div class="idc" style="background:#60a5fa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Craggy Gardens (MP 364)</div><div class="idesc">Jardim natural de rododendros a 1.700m de altitude — em setembro ainda tem floração residual e as vistas são espetaculares.</div><div class="tags"><span class="tag tt">jardim natural · vistas</span></div><div class="pr"><div class="pc">altitude: <strong>1.700m</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">10h30</span><div class="idc" style="background:#60a5fa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Mount Mitchell State Park</div><div class="idesc">O ponto mais alto do leste dos EUA (2.037m). Vista de 360° das Blue Ridge Mountains.</div><div class="tags"><span class="tag tc">ponto mais alto do leste EUA</span></div><div class="pr"><div class="pc">altitude: <strong>2.037m</strong></div><div class="pc">entrada park: <strong>grátis</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">12h30</span><div class="idc" style="background:#60a5fa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Almoço em Black Mountain</div><div class="idesc">Cidadezinha charmosa com cafés e restaurantes independentes. <strong>Black Mountain Ale House</strong> ou <strong>Red Rocker Inn</strong>.</div><div class="tags"><span class="tag tg">almoço</span></div><div class="pr"><div class="pc">estimativa: <strong>~US$15–25 p/p</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">14h30</span><div class="idc" style="background:#60a5fa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">River Arts District — tarde</div><div class="idesc">Segunda visita com mais tempo para explorar os estúdios abertos.</div><div class="tags"><span class="tag tt">estúdios de artistas</span></div></div></div>
+<div class="item"><div class="itl"><span class="itt">19h</span><div class="idc" style="background:#60a5fa"></div></div><div class="ib"><div class="itl2">Jantar — Omni Grove Park Inn</div><div class="idesc">O resort histórico de 1913 nas montanhas tem o restaurante com a melhor vista de Asheville.</div><div class="tags"><span class="tag tg">jantar · vista ★</span></div><div class="pr"><div class="pc">estimativa: <strong>~US$45–70 p/p</strong></div></div></div></div>
+</div></div>
+<div class="day"><div class="dh" style="background:#1a0f1a"><span class="dn" style="background:#3a1a3a;color:#a78bfa">Dia 14</span><span class="dt">Downtown Urban Trail + Grove Arcade + Woolworth Walk</span><span class="dd">Qui 17/set</span></div><div class="items"><div class="item"><div class="itl"><span class="itt">10h</span><div class="idc" style="background:#a78bfa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Downtown Urban Trail</div><div class="idesc">Trilha urbana autoguiada com 1,7 milha e 30 marcos históricos espalhados pelo centro de Asheville.</div><div class="tags"><span class="tag tt">trilha urbana · grátis</span></div><div class="map-block"><div class="map-block-title">Rota a pé · Downtown Asheville Urban Trail</div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Início</span> <span class="map-point-desc">— Pack Square Park</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Woolworth Walk</span> <span class="map-point-desc">— galeria em antigo Woolworth de 1938</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Grove Arcade</span> <span class="map-point-desc">— mercado público de 1929 com arquitetura Tudor</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Pinball Museum</span> <span class="map-point-desc">— museu interativo de fliperamas</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Battery Park</span> <span class="map-point-desc">— vista panorâmica das montanhas</span></div></div><div class="map-point"><span class="map-point-dot">·</span><div><span class="map-point-name">Fim</span> <span class="map-point-desc">— jantar no Omni Grove Park Inn</span></div></div><div class="map-info">~3 km · ~2h a pé</div><a href="https://www.google.com/maps/dir/?api=1&origin=Pack+Square+Park+Asheville+NC&destination=Omni+Grove+Park+Inn+Asheville+NC&waypoints=Woolworth+Walk+Asheville+NC|Grove+Arcade+Asheville+NC|Battery+Park+Asheville+NC&travelmode=walking" target="_blank" class="map-btn">↗ Abrir rota no Google Maps</a></div></div></div>
+<div class="item"><div class="itl"><span class="itt">11h</span><div class="idc" style="background:#a78bfa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Woolworth Walk</div><div class="idesc">Galeria de arte em 3 andares dentro do antigo Woolworth de 1938 — 170 artistas locais. O lunch counter original ainda existe.</div><div class="tags"><span class="tag tt">galeria histórica</span></div><div class="pr"><div class="pc">entrada: <strong>grátis</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">12h</span><div class="idc" style="background:#a78bfa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Grove Arcade</div><div class="idesc">Mercado público de 1929 em estilo Tudor inglês — o prédio mais bonito de Asheville. Restaurantes, lojas e artesanato local.</div><div class="tags"><span class="tag tg">mercado histórico · almoço</span></div><div class="pr"><div class="pc">almoço: <strong>~US$15–25 p/p</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">14h</span><div class="idc" style="background:#a78bfa"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Pinball Museum + Battery Park</div><div class="idesc">Museu interativo de fliperamas (US$15 — jogue à vontade). Battery Park tem vista panorâmica das montanhas.</div><div class="tags"><span class="tag tt">museu interativo</span></div><div class="pr"><div class="pc">Pinball Museum: <strong>US$15 p/p · jogue à vontade</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">19h</span><div class="idc" style="background:#a78bfa"></div></div><div class="ib"><div class="itl2">Último jantar em Asheville</div><div class="idesc"><strong>The Admiral</strong> (american comfort food, ~US$35–50 p/p) ou <strong>Sovereign Remedies</strong> (drinks + small plates, ~US$30–45 p/p).</div><div class="tags"><span class="tag tg">jantar</span></div><div class="pr"><div class="pc">estimativa: <strong>~US$35–50 p/p</strong></div></div></div></div>
+</div></div>
+<div class="day"><div class="dh" style="background:#111"><span class="dn" style="background:#1a1a1a;color:#888">Dia 15</span><span class="dt">Saída para Staunton</span><span class="dd">Sex 18/set</span></div><div class="items"><div class="item"><div class="itl"><span class="itt">9h</span><div class="idc" style="background:#888"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Café da manhã + checkout</div><div class="idesc"></div><div class="pr"><div class="pc">checkout: <strong>até 11h</strong></div></div></div></div>
+<div class="item"><div class="itl"><span class="itt">9h30</span><div class="idc" style="background:#888"></div><div class="iln"></div></div><div class="ib"><div class="itl2">Última caminhada — Pack Square</div><div class="idesc">Última manhã em Asheville — Pack Square Park e um café de despedida.</div><div class="notice nt">💡 French Broad Food Co-op ou High Five Coffee para um último café especial de Asheville.</div></div></div>
+<div class="item"><div class="itl"><span class="itt">11h</span><div class="idc" style="background:#888"></div></div><div class="ib"><div class="itl2">Saída para Staunton, VA</div><div class="idesc">I-26 W → I-81 N até Staunton.</div><div class="pr"><div class="pc">distância: <strong>~325 km</strong></div><div class="pc">tempo: <strong>~4h</strong></div><div class="pc">chegada: <strong>~15h</strong></div></div></div></div>
+</div></div>
+<div class="costs"><div class="costs-title">resumo de custos estimados · casal · 4 noites</div><div class="costs-grid"><div class="cost-item"><div class="cost-label">Biltmore Estate</div><div class="cost-value" style="color:#4ade80">~US$170</div><div class="cost-note">~US$85 p/p — inclui jardins e vinícola</div></div><div class="cost-item"><div class="cost-label">Blue Ridge Parkway</div><div class="cost-value" style="color:#4ade80">grátis</div><div class="cost-note">rodovia cênica</div></div><div class="cost-item"><div class="cost-label">Pinball Museum</div><div class="cost-value" style="color:#60a5fa">US$30</div><div class="cost-note">US$15 p/p — jogue à vontade</div></div><div class="cost-item"><div class="cost-label">jantares + almoços</div><div class="cost-value" style="color:#fbbf24">~US$400–560</div><div class="cost-note">~US$100–140/dia casal</div></div><div class="cost-item"><div class="cost-label">total estimado</div><div class="cost-value" style="color:#fb7185">~US$600–760</div><div class="cost-note">casal · sem hospedagem</div></div></div></div>
 </div>
 </body>
 </html>
