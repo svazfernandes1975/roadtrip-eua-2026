@@ -159,93 +159,89 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
     <p class="section-sub" style="margin-bottom:0">De carro, pela costa leste dos Estados Unidos</p>
 
     <div class="map-wrap">
-      <svg class="route-svg" viewBox="0 0 320 580" xmlns="http://www.w3.org/2000/svg" style="font-family:'DM Mono',monospace">
-        <!-- fundo do mapa estilizado -->
-        <rect width="320" height="580" fill="#0d1117" rx="12"/>
-
-        <!-- costa leste (forma decorativa) -->
-        <path d="M200,10 Q240,50 250,120 Q260,180 245,240 Q235,280 230,320 Q240,360 235,400 Q225,440 210,480 Q200,510 195,540 Q185,560 175,570" stroke="#1a3a5a" stroke-width="18" fill="none" opacity="0.4"/>
-
-        <!-- ROTA ANIMADA -->
-        <!-- Miami(165,530) → Orlando(145,450) → St.Augustine(175,400) → Savannah(185,340) → Greenville(130,250) → Asheville(115,230) → Staunton(145,165) → Williamsburg(195,140) → Washington(190,85) -->
+      <svg class="route-svg" viewBox="0 0 340 640" xmlns="http://www.w3.org/2000/svg" style="font-family:'DM Mono',monospace">
+        <rect width="340" height="640" fill="#0d1117" rx="12"/>
+        <path d="M200,20 Q230,60 235,130 Q240,190 228,250 Q220,290 218,330 Q225,370 220,410 Q212,450 205,490 Q198,520 192,550 Q185,570 178,585" stroke="#1a3a5a" stroke-width="16" fill="none" opacity="0.3"/>
         <path class="route-path"
-          d="M165,530 C155,500 148,475 145,450 C142,425 160,410 175,400 C185,392 188,368 185,340 C182,318 160,285 130,250 C118,238 115,235 115,230 C115,210 128,188 145,165 C158,148 175,144 195,140 C195,130 192,108 190,85"
+          d="M175,578 C168,548 162,522 160,496 C158,470 168,455 178,444 C186,436 188,412 186,384 C184,360 165,325 148,292 C140,278 138,272 138,265 C138,244 150,220 165,196 C176,178 188,173 195,165 C195,153 192,128 190,98"
           stroke="#fbbf24" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-        <!-- pontos das cidades (em ordem sul→norte para animação) -->
-        <g class="city-dot" style="transform-origin:165px 530px">
-          <circle cx="165" cy="530" r="8" fill="#fbbf24" opacity="0.15"/>
-          <circle cx="165" cy="530" r="5" fill="#fbbf24"/>
-          <text x="145" y="526" fill="#fbbf24" font-size="9" text-anchor="end" font-weight="500">Miami</text>
-          <text x="145" y="537" fill="#555" font-size="7" text-anchor="end">chegada · 4/set</text>
+        <!-- MIAMI -->
+        <g class="city-dot" style="transform-origin:175px 578px">
+          <circle cx="175" cy="578" r="7" fill="#fbbf24" opacity="0.15"/>
+          <circle cx="175" cy="578" r="5" fill="#fbbf24"/>
+          <text x="100" y="574" fill="#fbbf24" font-size="8" text-anchor="middle" font-weight="500">Miami</text>
+          <text x="100" y="585" fill="#555" font-size="7" text-anchor="middle">chegada · 4/set</text>
+          <line x1="126" y1="578" x2="168" y2="578" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:145px 450px">
-          <circle cx="145" cy="450" r="8" fill="#4ade80" opacity="0.15"/>
-          <circle cx="145" cy="450" r="5" fill="#4ade80"/>
-          <text x="125" y="446" fill="#4ade80" font-size="9" text-anchor="end" font-weight="500">Orlando</text>
-          <text x="125" y="457" fill="#555" font-size="7" text-anchor="end">4–10/set · 6 noites</text>
+        <!-- ORLANDO -->
+        <g class="city-dot" style="transform-origin:160px 496px">
+          <circle cx="160" cy="496" r="7" fill="#4ade80" opacity="0.15"/>
+          <circle cx="160" cy="496" r="5" fill="#4ade80"/>
+          <text x="88" y="492" fill="#4ade80" font-size="8" text-anchor="middle" font-weight="500">Orlando</text>
+          <text x="88" y="503" fill="#555" font-size="7" text-anchor="middle">4–10/set · 6n</text>
+          <line x1="114" y1="496" x2="153" y2="496" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:175px 400px">
-          <circle cx="175" cy="400" r="7" fill="#60a5fa" opacity="0.15"/>
-          <circle cx="175" cy="400" r="4" fill="#60a5fa"/>
-          <text x="192" y="396" fill="#60a5fa" font-size="9" font-weight="500">St. Augustine</text>
-          <text x="192" y="407" fill="#555" font-size="7">10–11/set · 1 noite</text>
+        <!-- ST. AUGUSTINE -->
+        <g class="city-dot" style="transform-origin:178px 444px">
+          <circle cx="178" cy="444" r="6" fill="#60a5fa" opacity="0.15"/>
+          <circle cx="178" cy="444" r="4" fill="#60a5fa"/>
+          <text x="252" y="440" fill="#60a5fa" font-size="8" text-anchor="middle" font-weight="500">St. Augustine</text>
+          <text x="252" y="451" fill="#555" font-size="7" text-anchor="middle">10–11/set · 1n</text>
+          <line x1="183" y1="444" x2="218" y2="444" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:185px 340px">
-          <circle cx="185" cy="340" r="7" fill="#2dd4bf" opacity="0.15"/>
-          <circle cx="185" cy="340" r="4" fill="#2dd4bf"/>
-          <text x="200" y="336" fill="#2dd4bf" font-size="9" font-weight="500">Savannah</text>
-          <text x="200" y="347" fill="#555" font-size="7">11–13/set · 2 noites</text>
+        <!-- SAVANNAH -->
+        <g class="city-dot" style="transform-origin:186px 384px">
+          <circle cx="186" cy="384" r="6" fill="#2dd4bf" opacity="0.15"/>
+          <circle cx="186" cy="384" r="4" fill="#2dd4bf"/>
+          <text x="255" y="380" fill="#2dd4bf" font-size="8" text-anchor="middle" font-weight="500">Savannah</text>
+          <text x="255" y="391" fill="#555" font-size="7" text-anchor="middle">11–13/set · 2n</text>
+          <line x1="191" y1="384" x2="222" y2="384" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:130px 250px">
-          <circle cx="130" cy="250" r="7" fill="#a78bfa" opacity="0.15"/>
-          <circle cx="130" cy="250" r="4" fill="#a78bfa"/>
-          <text x="115" y="246" fill="#a78bfa" font-size="9" text-anchor="end" font-weight="500">Greenville</text>
-          <text x="115" y="257" fill="#555" font-size="7" text-anchor="end">13–14/set · 1 noite</text>
+        <!-- GREENVILLE -->
+        <g class="city-dot" style="transform-origin:148px 292px">
+          <circle cx="148" cy="292" r="6" fill="#a78bfa" opacity="0.15"/>
+          <circle cx="148" cy="292" r="4" fill="#a78bfa"/>
+          <text x="76" y="288" fill="#a78bfa" font-size="8" text-anchor="middle" font-weight="500">Greenville</text>
+          <text x="76" y="299" fill="#555" font-size="7" text-anchor="middle">13–14/set · 1n</text>
+          <line x1="102" y1="292" x2="141" y2="292" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:115px 230px">
-          <circle cx="115" cy="225" r="7" fill="#f97316" opacity="0.15"/>
-          <circle cx="115" cy="225" r="4" fill="#f97316"/>
-          <text x="100" y="221" fill="#f97316" font-size="9" text-anchor="end" font-weight="500">Asheville</text>
-          <text x="100" y="232" fill="#555" font-size="7" text-anchor="end">14–18/set · 3 noites</text>
+        <!-- ASHEVILLE -->
+        <g class="city-dot" style="transform-origin:138px 265px">
+          <circle cx="138" cy="265" r="6" fill="#f97316" opacity="0.15"/>
+          <circle cx="138" cy="265" r="4" fill="#f97316"/>
+          <text x="68" y="261" fill="#f97316" font-size="8" text-anchor="middle" font-weight="500">Asheville</text>
+          <text x="68" y="272" fill="#555" font-size="7" text-anchor="middle">14–18/set · 3n</text>
+          <line x1="94" y1="265" x2="131" y2="265" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:145px 165px">
-          <circle cx="145" cy="165" r="7" fill="#888" opacity="0.15"/>
-          <circle cx="145" cy="165" r="4" fill="#888"/>
-          <text x="160" y="161" fill="#888" font-size="9" font-weight="500">Staunton</text>
-          <text x="160" y="172" fill="#555" font-size="7">18–19/set · 1 noite</text>
+        <!-- STAUNTON -->
+        <g class="city-dot" style="transform-origin:165px 196px">
+          <circle cx="165" cy="196" r="6" fill="#888" opacity="0.15"/>
+          <circle cx="165" cy="196" r="4" fill="#888"/>
+          <text x="248" y="192" fill="#888" font-size="8" text-anchor="middle" font-weight="500">Staunton</text>
+          <text x="248" y="203" fill="#555" font-size="7" text-anchor="middle">18–19/set · 1n</text>
+          <line x1="170" y1="196" x2="216" y2="196" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:195px 140px">
-          <circle cx="195" cy="140" r="7" fill="#fb7185" opacity="0.15"/>
-          <circle cx="195" cy="140" r="4" fill="#fb7185"/>
-          <text x="210" y="136" fill="#fb7185" font-size="9" font-weight="500">Williamsburg</text>
-          <text x="210" y="147" fill="#555" font-size="7">19–21/set · 2 noites</text>
+        <!-- WILLIAMSBURG -->
+        <g class="city-dot" style="transform-origin:195px 165px">
+          <circle cx="195" cy="165" r="6" fill="#fb7185" opacity="0.15"/>
+          <circle cx="195" cy="165" r="4" fill="#fb7185"/>
+          <text x="271" y="161" fill="#fb7185" font-size="8" text-anchor="middle" font-weight="500">Williamsburg</text>
+          <text x="271" y="172" fill="#555" font-size="7" text-anchor="middle">19–21/set · 2n</text>
+          <line x1="200" y1="165" x2="243" y2="165" stroke="#333" stroke-width="0.5"/>
         </g>
-
-        <g class="city-dot" style="transform-origin:190px 85px">
-          <circle cx="190" cy="85" r="9" fill="#fbbf24" opacity="0.2"/>
-          <circle cx="190" cy="85" r="6" fill="#fbbf24"/>
-          <text x="205" y="81" fill="#fbbf24" font-size="9" font-weight="500">Washington DC</text>
-          <text x="205" y="92" fill="#555" font-size="7">21–26/set · 5 noites</text>
+        <!-- WASHINGTON DC -->
+        <g class="city-dot" style="transform-origin:190px 98px">
+          <circle cx="190" cy="98" r="9" fill="#fbbf24" opacity="0.2"/>
+          <circle cx="190" cy="98" r="6" fill="#fbbf24"/>
+          <text x="190" y="80" fill="#fbbf24" font-size="8" text-anchor="middle" font-weight="500">Washington DC</text>
+          <text x="190" y="70" fill="#555" font-size="7" text-anchor="middle">21–26/set · 5n</text>
         </g>
-
-        <!-- legenda do mapa -->
-        <rect x="10" y="548" width="300" height="22" fill="#0d1117" rx="4"/>
-        <polyline points="15,558 35,558" stroke="#fbbf24" stroke-width="2" fill="none"/>
-        <text x="40" y="562" fill="#555" font-size="8">rota de carro · ~9.400 km total</text>
+        <!-- legenda -->
+        <rect x="10" y="612" width="220" height="20" fill="#0d1117" rx="4"/>
+        <polyline points="15,622 35,622" stroke="#fbbf24" stroke-width="2" fill="none"/>
+        <text x="40" y="626" fill="#555" font-size="7">rota de carro · ~9.400 km total</text>
       </svg>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CIDADES ══ -->
+    </div> ══ -->
 <section class="section">
   <div class="section-label">os destinos</div>
   <div class="section-title">Roteiros cidade a cidade</div>
