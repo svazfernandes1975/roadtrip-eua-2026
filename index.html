@@ -391,50 +391,38 @@ function updateCountdown(){
 updateCountdown();
 setInterval(updateCountdown,1000);
 
-// ── ANIMAÇÃO DA ROTA — JS puro, compatível com mobile ──
+// ── ANIMAÇÃO DA ROTA — dispara assim que o SVG aparece na tela ──
 function animateRoute() {
   var path = document.getElementById('routePath');
   if (!path) return;
-
-  // Mede o comprimento real do path
   var len = path.getTotalLength ? path.getTotalLength() : 1800;
   path.style.strokeDasharray = len;
   path.style.strokeDashoffset = len;
   path.style.transition = 'none';
-
-  // Força reflow
-  path.getBoundingClientRect();
-
-  // Anima o traço de Miami (baixo) para DC (cima)
-  path.style.transition = 'stroke-dashoffset 3s ease-in-out';
+  path.getBoundingClientRect(); // força reflow
+  path.style.transition = 'stroke-dashoffset 2.5s ease-in-out';
   path.style.strokeDashoffset = '0';
-
-  // Aparece cada cidade sequencialmente
   var dots = document.querySelectorAll('.city-dot');
   dots.forEach(function(dot, i) {
-    setTimeout(function() {
-      dot.style.opacity = '1';
-    }, 600 + i * 300);
+    setTimeout(function() { dot.style.opacity = '1'; }, 400 + i * 250);
   });
 }
 
-// Dispara quando a seção do mapa entra na tela
-var mapSection = document.querySelector('.map-section');
 var animated = false;
+var svg = document.querySelector('.route-svg');
 
-if (mapSection && 'IntersectionObserver' in window) {
+if (svg && 'IntersectionObserver' in window) {
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting && !animated) {
         animated = true;
-        setTimeout(animateRoute, 200);
+        animateRoute();
       }
     });
-  }, {threshold: 0.3});
-  obs.observe(mapSection);
+  }, {threshold: 0, rootMargin: '0px 0px -50px 0px'});
+  obs.observe(svg);
 } else {
-  // Fallback para browsers sem IntersectionObserver (alguns mobile antigos)
-  setTimeout(animateRoute, 500);
+  setTimeout(animateRoute, 300);
 }
 </script>
 </body>
