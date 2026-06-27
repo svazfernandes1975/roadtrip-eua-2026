@@ -199,7 +199,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
           <circle cx="138" cy="265" r="6" fill="#f97316" opacity="0.15"/>
           <circle cx="138" cy="265" r="4" fill="#f97316"/>
           <text x="68" y="261" fill="#f97316" font-size="8" text-anchor="middle" font-weight="500">Asheville</text>
-          <text x="68" y="272" fill="#555" font-size="7" text-anchor="middle">14–18/set · 4n</text>
+          <text x="68" y="272" fill="#555" font-size="7" text-anchor="middle">14–18/set · 3n</text>
           <line x1="94" y1="265" x2="131" y2="265" stroke="#333" stroke-width="0.5"/>
         </g>
         <!-- STAUNTON -->
@@ -230,39 +230,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <polyline points="15,622 35,622" stroke="#fbbf24" stroke-width="2" fill="none"/>
         <text x="40" y="626" fill="#555" font-size="7">rota de carro · ~2.400 km total</text>
       </svg>
-    </div>
-  </div>
-</section>
-
-<!-- ══ BANNER RESERVAS ══ -->
-<section style="padding:1.5rem 2rem;background:var(--bg2);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2)">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
-    <div>
-      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.15em;margin-bottom:.5rem">reservas &amp; ingressos · 23 itens</div>
-      <div id="res-sum" style="font-size:1rem;font-weight:600;min-height:1.4em"><span style="color:var(--muted)">carregando...</span></div>
-    </div>
-    <a href="reservas.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--adim);border:1px solid var(--amber);border-radius:8px;padding:.65rem 1.4rem;font-family:'DM Mono',monospace;font-size:12px;color:var(--amber);text-decoration:none;white-space:nowrap">gerenciar reservas →</a>
-  </div>
-</section>
-<script>
-(function(){
-  try{
-    var d=JSON.parse(localStorage.getItem('reservas_viagem_v3')||'null');
-    var el=document.getElementById('res-sum');
-    if(!el)return;
-    if(!d||!d.length){el.innerHTML='<span style="color:var(--muted)">Abra a p\u00e1gina de reservas para inicializar os dados</span>';return;}
-    var u=d.filter(function(r){return r.status==='urgente';}).length;
-    var p=d.filter(function(r){return r.status==='pendente';}).length;
-    var c=d.filter(function(r){return r.status==='confirmado';}).length;
-    var pts=[];
-    if(u)pts.push('<span style="color:#fb7185">\u26a0 '+u+' urgente'+(u>1?'s':'')+'</span>');
-    if(p)pts.push('<span style="color:#fbbf24">'+p+' pendente'+(p>1?'s':'')+'</span>');
-    if(c)pts.push('<span style="color:#4ade80">\u2713 '+c+' confirmado'+(c>1?'s':'')+'</span>');
-    el.innerHTML=pts.length?pts.join(' \u00b7 '):'<span style="color:#4ade80">\u2713 Tudo confirmado!</span>';
-  }catch(e){}
-})();
-</script>
-
+    </div> ══ -->
 <section class="section">
   <div class="section-label">os destinos</div>
   <div class="section-title">Roteiros cidade a cidade</div>
